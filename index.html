@@ -1,0 +1,1640 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lernzettel Sport · Ausdauer</title>
+<meta name="description" content="Interaktiver Lernzettel Sport-Theorie Ausdauer: Leistungsfaktoren, Energiegewinnung, Laktat und Schwellen, Ausdauerfähigkeiten, Trainingsmethoden, Trainingspuls, Cooper-Test – mit drei Erklärstufen, Abhak-Liste, Schnelltests und Lernkarten.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/extras.css">
+<link rel="stylesheet" href="css/lernkarten.css">
+<!-- Fachdesign (Farben, Schriften, Motiv) – immer zuletzt laden -->
+<link rel="stylesheet" href="css/theme.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231a1d24'/%3E%3Cpath d='M2 18 H9 L12 12 L15 24 L18 6 L21 18 H30' fill='none' stroke='%23ff7452' stroke-width='2.6'/%3E%3C/svg%3E">
+<script>
+window.LERNZETTEL={store:'sport-ausdauer',ranks:[[0,'Couchsitzer'],[0.06,'Spaziergänger'],[0.16,'Walker'],[0.30,'Jogger'],[0.46,'5-km-Läufer'],[0.62,'Halbmarathoni'],[0.80,'Marathoni'],[1,'Ultraläufer']]};
+try{var t=localStorage.getItem('sport-ausdauer-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}
+</script>
+</head>
+<body>
+
+<!-- Gemeinsame SVG-Definitionen (Pfeilspitzen, Muster) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="f-ink"/></marker>
+    <marker id="arr-acc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="f-acc"/></marker>
+  </defs>
+</svg>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top" aria-label="Lernzettel Ausdauer – nach oben">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="1" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 15 H7 L9.5 10 L12.5 20 L15.5 5 L18 15 H25" fill="none" stroke="var(--accent)" stroke-width="2.2"/></svg>
+      <span class="brand-text">Ausdauer</span>
+    </a>
+    <nav class="nav" aria-label="Seiten">
+      <a href="index.html" aria-current="page">Lernzettel</a>
+      <a href="lernkarten.html">Lernkarten</a>
+    </nav>
+    <div class="topbar-tools">
+      <div class="seg" id="levelSwitch" role="group" aria-label="Erklärstufe für alle Themen">
+        <button type="button" data-l="1" aria-pressed="false"><span class="bars" data-n="1" aria-hidden="true"><i></i><i></i><i></i></span>Einfach</button>
+        <button type="button" data-l="2" aria-pressed="true"><span class="bars" data-n="2" aria-hidden="true"><i></i><i></i><i></i></span>Normal</button>
+        <button type="button" data-l="3" aria-pressed="false"><span class="bars" data-n="3" aria-hidden="true"><i></i><i></i><i></i></span>Genauer</button>
+      </div>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4L7 17M17 7l1.4-1.4"/><path d="M12 8a4 4 0 0 0 0 8z" fill="currentColor"/><path d="M12 8a4 4 0 0 1 0 8"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="topbar-progress" aria-hidden="true"><span id="topProgress"></span></div>
+</header>
+
+<section class="hero" id="top">
+  <!-- Dekoration: Laufbahn (Bahnlinien eines Stadions) + Pulskurve -->
+  <svg class="hero-topo" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="1.3">
+      <path d="M670,160 L1050,160 A90,90 0 0 1 1050,340 L670,340 A90,90 0 0 1 670,160Z"/>
+      <path d="M670,130 L1050,130 A120,120 0 0 1 1050,370 L670,370 A120,120 0 0 1 670,130Z"/>
+      <path d="M670,100 L1050,100 A150,150 0 0 1 1050,400 L670,400 A150,150 0 0 1 670,100Z"/>
+      <path d="M670,70 L1050,70 A180,180 0 0 1 1050,430 L670,430 A180,180 0 0 1 670,70Z"/>
+      <path d="M670,40 L1050,40 A210,210 0 0 1 1050,460 L670,460 A210,210 0 0 1 670,40Z"/>
+      <path d="M670,10 L1050,10 A240,240 0 0 1 1050,490 L670,490 A240,240 0 0 1 670,10Z"/>
+      <path d="M670,-20 L1050,-20 A270,270 0 0 1 1050,520 L670,520 A270,270 0 0 1 670,-20Z"/>
+      <path d="M670,-50 L1050,-50 A300,300 0 0 1 1050,550 L670,550 A300,300 0 0 1 670,-50Z"/>
+      <path d="M670,-80 L1050,-80 A330,330 0 0 1 1050,580 L670,580 A330,330 0 0 1 670,-80Z"/>
+      <path class="pulse" d="M0,440 L40,440 L48,432 L56,440 L66,440 L72,450 L80,370 L88,470 L96,440 L126,440 L140,424 L154,440 L214,440 L254,440 L262,432 L270,440 L280,440 L286,450 L294,370 L302,470 L310,440 L340,440 L354,424 L368,440 L428,440 L468,440 L476,432 L484,440 L494,440 L500,450 L508,370 L516,470 L524,440 L554,440 L568,424 L582,440 L642,440 L682,440 L690,432 L698,440 L708,440 L714,450 L722,370 L730,470 L738,440 L768,440 L782,424 L796,440 L856,440 L896,440 L904,432 L912,440 L922,440 L928,450 L936,370 L944,470 L952,440 L982,440 L996,424 L1010,440 L1070,440 L1110,440 L1118,432 L1126,440 L1136,440 L1142,450 L1150,370 L1158,470 L1166,440 L1196,440 L1210,424 L1224,440 L1284,440"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div>
+      <div class="overline">Sport · Theorie · Lernzettel</div>
+      <h1>Aus&shy;dauer<span>Energie, Laktat &amp; Training</span></h1>
+      <p class="lead">Alles, was für die Arbeit wichtig ist – jedes Thema in drei Stufen erklärt. Hake ab, was du verstanden hast, und lade Balken für Balken deinen Ausdauer-Akku.</p>
+      <div class="hero-meta">
+        <span class="chip" style="--cc:var(--c2)"><i></i>Energiegewinnung</span>
+        <span class="chip" style="--cc:var(--c3)"><i></i>Laktat &amp; Schwellen</span>
+        <span class="chip" style="--cc:var(--c5)"><i></i>Training &amp; Puls</span>
+      </div>
+    </div>
+    <aside class="rank-card" aria-label="Dein Fortschritt">
+      <div class="core" id="core" aria-label="Ausdauer-Akku: jedes verstandene Thema lädt einen Balken"></div>
+      <div class="rank-info">
+        <div class="overline">Dein Rang</div>
+        <div class="rank-name" id="rankName">Couchsitzer</div>
+        <div class="rank-points"><span id="points">0</span> / <span id="pointsMax">0</span> Punkte</div>
+        <div class="rank-bar" aria-hidden="true"><span id="rankBar"></span></div>
+        <div class="rank-next" id="rankNext">&nbsp;</div>
+        <div class="stats">
+          <div><b><span id="doneCount">0</span>/<span id="totalCount">0</span></b>Themen verstanden</div>
+          <div><b><span id="quizCount">0</span>/<span id="quizTotal">0</span></b>Testfragen richtig</div>
+        </div>
+        <button class="btn" type="button" id="randomTopic">Zufälliges offenes Thema →</button>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="layout">
+  <aside class="sidebar" aria-label="Inhalt">
+    <nav class="toc-side" id="tocSide"></nav>
+    <div class="side-box">
+      <div class="overline">Abfragen</div>
+      <a href="lernkarten.html">Lernkarten · alle Themen →</a>
+      <a href="lernkarten.html#ka">Lernkarten · nur KA!-Stoff →</a>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section class="block" id="inhalt">
+      <h2>Inhalt</h2>
+      <p class="block-lead">24 Themen in 6 Kapiteln, in der Reihenfolge des Buchkapitels „Ausdauer“ (S. 6–42). Hake direkt hier oder beim Thema ab.</p>
+      <div class="box tipp"><span class="box-label">Was kommt dran? <span class="ka">KA!</span></span>Laut Themenliste für die Arbeit: <b>Definitionen</b> · <b>Ausdauer &amp; fit sein unterscheiden</b> · <b>Energiegewinnung</b> · <b>Wirkung von regelmäßigem Ausdauertraining</b> · <b>Formel max. Herzfrequenz</b> · <b>aerob &amp; anaerob</b> · Buch <b>S. 6, 9, 20–25, 31–34</b> (angekreuzt sind außerdem S. 19 und 27). Themen dazu tragen die rote Marke <span class="ka">KA!</span>. Alles andere ist zur Sicherheit auch drin.</div>
+      <div class="howto">
+        <div><span class="n">01</span><b>Stufe wählen</b>Oben rechts für alle Themen – oder bei jedem Thema einzeln: Einfach, Normal, Genauer.</div>
+        <div><span class="n">02</span><b>Abhaken</b>Verstanden? Haken setzen: +10 Punkte und ein neuer Balken in deinem Ausdauer-Akku.</div>
+        <div><span class="n">03</span><b>Schnelltest</b>Unter jedem Thema: richtige Antwort beim ersten Versuch = +5 Punkte.</div>
+      </div>
+      <div class="lk-teaser">
+        <div><b>Lernkarten zum Abfragen</b><span id="lkTeaserText">Rund 100 Karteikarten – Begriffe, Zahlen, Formeln, „Warum …?“. Mit Karteikasten und Filter „nur KA!“.</span></div>
+        <a class="btn" href="lernkarten.html">Lernkarten öffnen →</a>
+      </div>
+      <!-- wird von js/app.js aus den Kapiteln erzeugt -->
+      <div class="toc-grid" id="tocGrid"></div>
+    </section>
+
+    <!-- ================= KAPITEL I ================= -->
+    <section class="chapter" id="kap-1" style="--cc:var(--c1)" data-short="Fitness &amp; Ausdauer" data-msg="Grundlagen sitzen – jetzt geht es an die Energie.">
+      <header class="chapter-head">
+        <div class="chapter-no">I</div>
+        <div><div class="overline">Kapitel I · Buch S. 6, 9, 18</div><h2>Fitness &amp; Ausdauer</h2><p class="chapter-desc">Die fünf physischen Leistungsfaktoren, der Unterschied zwischen Ausdauer im Sport und „fit sein“ und was regelmäßiges Ausdauertraining im Körper bewirkt.</p></div>
+        <div class="chapter-count"></div>
+      </header>
+
+      <article class="topic" id="leistungsfaktoren" data-show="2">
+        <header class="topic-head"><h3>Die fünf physischen Leistungsfaktoren <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Jede sportliche Leistung braucht fünf „Zutaten“: <strong>Kraft, Schnelligkeit, Ausdauer, Beweglichkeit und Koordination</strong>. Das sind die <strong>physischen Leistungsfaktoren</strong>.</p>
+          <p class="analogy">Wie bei einem Rezept: Ein Kuchen braucht Mehl, Zucker, Eier … – je nach Kuchen in anderer Menge. Ein Gewichtheber braucht vor allem Kraft, ein Marathonläufer vor allem Ausdauer.</p>
+          <p>Meist wirken mehrere Faktoren <strong>zusammen</strong> – Treppensteigen auf einen Turm braucht Kraft <em>und</em> Ausdauer = <strong>Kraftausdauer</strong>. Nur selten zählt ein Faktor allein.</p>
+          <p>Und: <strong>Allgemein fit</strong> bist du nur, wenn alle fünf gut ausgebildet sind.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="box heft"><span class="box-label">Aus dem Buch · S. 6</span>Eine allgemeine Fitness, d. h. in den unterschiedlichsten Situationen fit zu sein, ist nur auf der <b>Basis von gut ausgebildeten physischen Leistungsfaktoren</b> möglich.</div>
+          <div class="tbl"><table>
+            <thead><tr><th>Faktor</th><th>Charakterisierung (Tab. 1)</th><th>Beispiel (hpts. leistungsbestimmend)</th></tr></thead>
+            <tbody>
+              <tr><th>Kraft</th><td>Jede Bewegung erfordert Kraft; Muskelkraft ist die Voraussetzung für die Realisierung jeder sportlichen Leistung.</td><td>Gewichtheben</td></tr>
+              <tr><th>Schnelligkeit</th><td>Fähigkeit des Nerv-Muskel-Systems, motorische Aktionen in möglichst kurzer Zeit durchzuführen.</td><td>100-m-Sprint</td></tr>
+              <tr><th>Ausdauer</th><td>Physische und psychische <b>Widerstandsfähigkeit gegen Ermüdung</b> bei relativ lang dauernden Belastungen (Belastungswiederholungen) und die <b>rasche Erholungsfähigkeit</b> nach der Belastung.</td><td>Langstreckenlauf</td></tr>
+              <tr><th>Beweglichkeit</th><td>Fähigkeit, Bewegungen mit großer Schwingungsweite ausführen zu können.</td><td>Gymnastik</td></tr>
+              <tr><th>Koordination</th><td>Das Zentralnervensystem steuert die Skelettmuskulatur so, dass Bewegungen sicher und ökonomisch ausgeführt und neue Bewegungen in kurzer Zeit erlernt werden können.</td><td>Wasserspringen</td></tr>
+            </tbody>
+          </table></div>
+          <ul>
+            <li>Für Leistungen in einzelnen Sportarten und Disziplinen haben die Faktoren eine <strong>unterschiedliche Bedeutung</strong>.</li>
+            <li><strong>Nur in wenigen Fällen</strong> sind sie <strong>alleine, in Reinform</strong> leistungsbestimmend – in der Regel wirken sie zusammen.</li>
+            <li><b>Mischformen</b> (z. B. Kraft + Ausdauer beim Treppensteigen = <b>Kraftausdauer</b>) werden dem <b>dominierenden</b> Faktor zugeordnet: Kraftausdauer ist eine <b>Kraftfähigkeit</b>.</li>
+          </ul>
+          <div class="box merke"><span class="box-label">Merke</span>Ausdauer = Widerstandsfähigkeit gegen <b>Ermüdung</b> + rasche <b>Erholungsfähigkeit</b>. Beide Teile gehören in die Definition!</div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Warum abgrenzen, wenn doch alles zusammenwirkt?</strong> Aus Gründen der <em>Übersichtlichkeit und Praktikabilität</em>: Nur wer die Faktoren getrennt betrachtet, kann gezielt trainieren (z. B. Ausdauerfähigkeiten, Kraftfähigkeiten).</li>
+            <li><strong>Doppelter Charakter der Ausdauer:</strong> „physisch <em>und psychisch</em>“ – wer müde ist, muss auch den Kopf überwinden. Und die Erholungsfähigkeit ist ausdrücklich Teil der Definition (wichtig für Spielsportarten, Intervalle, Circuit → <a href="#grundlagenausdauer">Grundlagenausdauer</a>).</li>
+            <li>Fachlich zusätzlich (nicht im Buch, aber üblich): weitere Mischformen sind <b>Schnellkraft</b> (Kraft + Schnelligkeit) und <b>Schnelligkeitsausdauer</b> (Schnelligkeit + Ausdauer).</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>„Nennen Sie Sportarten, bei denen ein Faktor dominiert“: Gewichtheben (Kraft), 100 m (Schnelligkeit), Marathon (Ausdauer), Rhythmische Sportgymnastik (Beweglichkeit), Wasserspringen/Turnen (Koordination). Immer mit kurzer Begründung!</div>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>Ausdauer nur als „lange durchhalten“ definieren. Es fehlen dann die <b>Ermüdungswiderstandsfähigkeit</b> (physisch + psychisch) und die <b>Erholungsfähigkeit</b>.</div>
+        </div>
+        <figure class="fig">
+          <svg viewBox="0 0 660 290" role="img" aria-label="Fünfeck der physischen Leistungsfaktoren mit Mischformen">
+            <polygon points="330,45 439.4,124.5 397.6,253 262.4,253 220.6,124.5" fill="none" class="s-line" stroke-width="1.5"/>
+            <line x1="330" y1="45" x2="439.4" y2="124.5" class="s-acc" stroke-width="3"/>
+            <line x1="330" y1="45" x2="397.6" y2="253" class="s-mute" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <line x1="439.4" y1="124.5" x2="397.6" y2="253" class="s-mute" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <rect x="275" y="32" width="110" height="26" class="f-surface s-ink" stroke-width="1.5"/>
+            <text x="330" y="50" text-anchor="middle" class="t-b t-s">Kraft</text>
+            <rect x="384.4" y="111.5" width="110" height="26" class="f-acc"/>
+            <text x="439.4" y="129.5" text-anchor="middle" class="t-b t-s t-w">Ausdauer</text>
+            <rect x="342.6" y="240" width="110" height="26" class="f-surface s-ink" stroke-width="1.5"/>
+            <text x="397.6" y="258" text-anchor="middle" class="t-b t-s">Schnelligkeit</text>
+            <rect x="207.4" y="240" width="110" height="26" class="f-surface s-ink" stroke-width="1.5"/>
+            <text x="262.4" y="258" text-anchor="middle" class="t-b t-s">Beweglichkeit</text>
+            <rect x="165.6" y="111.5" width="110" height="26" class="f-surface s-ink" stroke-width="1.5"/>
+            <text x="220.6" y="129.5" text-anchor="middle" class="t-b t-s">Koordination</text>
+            <text x="402" y="78" class="t-xs t-acc t-b">Kraftausdauer</text>
+            <text x="402" y="91" class="t-xs t-mute">(Buchbeispiel: Treppe)</text>
+            <text x="436" y="196" class="t-xs t-mute">Schnelligkeitsausdauer</text>
+            <text x="355" y="150" text-anchor="end" class="t-xs t-mute">Schnellkraft</text>
+            <text x="300" y="175" text-anchor="middle" class="t-s t-b">allgemeine</text>
+            <text x="300" y="190" text-anchor="middle" class="t-s t-b">Fitness</text>
+            <text x="300" y="204" text-anchor="middle" class="t-xs t-mute">= alle fünf gut</text>
+            <text x="300" y="216" text-anchor="middle" class="t-xs t-mute">ausgebildet</text>
+            <text x="20" y="276" class="t-xs t-mute">gestrichelt: weitere übliche Mischformen</text>
+          </svg>
+          <figcaption>Die fünf physischen Leistungsfaktoren und Mischformen (schematisch). Rote Linie: Mischform aus dem Buch.</figcaption>
+        </figure>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=18r9wjdcrRs" target="_blank" rel="noopener">Welche sportmotorischen Fähigkeiten gibt es?</a> <small>Karriere als Fitnesstrainer · 2:19</small></li>
+            <li><a href="https://www.youtube.com/watch?v=9m9NFdZMAas" target="_blank" rel="noopener">Konditionelle Fähigkeiten und ihre Wechselbeziehungen</a> <small>DocBeggesSeggl · 18:13</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="2"><p>Wie heißt laut Buch die Mischform aus Kraft und Ausdauer – und wozu wird sie gezählt?</p>
+            <ol><li>Schnellkraft – zu den Schnelligkeitsfähigkeiten</li><li>Kraftausdauer – zu den Ausdauerfähigkeiten</li><li>Kraftausdauer – zu den Kraftfähigkeiten</li></ol>
+            <p class="why">Mischformen werden dem dominierenden Faktor zugeordnet: Kraftausdauer ist eine Kraftfähigkeit (Beispiel: Treppensteigen auf einen Turm).</p></div>
+          <div class="q" data-a="0"><p>Welche Definition beschreibt Ausdauer vollständig?</p>
+            <ol><li>Physische und psychische Widerstandsfähigkeit gegen Ermüdung bei lang dauernden Belastungen und rasche Erholungsfähigkeit</li><li>Fähigkeit, eine Bewegung möglichst lange gleich schnell auszuführen</li><li>Fähigkeit des Nerv-Muskel-Systems, Aktionen in kurzer Zeit durchzuführen</li></ol>
+            <p class="why">Zwei Teile: Ermüdungswiderstand (physisch + psychisch) und Erholungsfähigkeit. Antwort C ist die Schnelligkeit.</p></div>
+          <div class="q" data-a="1"><p>Wann ist man laut Buch „allgemein fit“?</p>
+            <ol><li>Wenn die Ausdauer besonders gut ausgebildet ist</li><li>Wenn alle physischen Leistungsfaktoren gut ausgebildet sind</li><li>Wenn man eine Sportart auf hohem Niveau betreibt</li></ol>
+            <p class="why">Allgemeine Fitness = in den unterschiedlichsten Situationen fit sein → nur auf der Basis gut ausgebildeter physischer Leistungsfaktoren möglich.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="ausdauer-fit" data-show="2">
+        <header class="topic-head"><h3>Ausdauer im Sport vs. „fit sein“ <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Im <strong>Leistungssport</strong> soll die Ausdauer genau zu <em>einer</em> Disziplin passen: Ein 200-m-Läufer muss sein Tempo halten, ein Fußballer muss in der 90. Minute noch antreten können. Ziel: <strong>die sportliche Leistung optimieren</strong>.</p>
+          <p>Bei <strong>Gesundheit und Fitness</strong> geht es um etwas anderes: im Alltag in <strong>vielen verschiedenen Situationen</strong> gut leistungsfähig sein, das <strong>lange</strong> durchhalten und sich <strong>schnell erholen</strong>.</p>
+          <p class="analogy">Ausdauer im Sport ist wie ein Rennwagen für genau eine Strecke. Fitness ist wie ein zuverlässiges Alltagsauto: fährt überall, lange und springt immer wieder an.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="tbl"><table>
+            <thead><tr><th></th><th>Ausdauer als Leistungsfaktor im Sport</th><th>Ausdauer für Gesundheit &amp; Fitness („fit sein“)</th></tr></thead>
+            <tbody>
+              <tr><th>Ziel</th><td>sportliche Leistung <b>optimieren</b></td><td>gute <b>allgemeine Leistungsfähigkeit</b></td></tr>
+              <tr><th>Ausprägung</th><td>muss <b>sehr speziell</b> ausgeprägt sein (passend zur Disziplin)</td><td>in <b>verschiedenen Situationen</b>, <b>längere Zeit aufrecht erhalten</b></td></tr>
+              <tr><th>Beispiele</th><td>200 m: Schrittschnelligkeit und -länge halten · 1000 m / 200 m Schwimmen: gleichmäßig hohes Tempo · Fußball: am Ende noch antreten können</td><td>Alltag, Beruf, Freizeit; gute <b>Erholungsfähigkeit</b> ist von hohem gesundheitlichem Wert</td></tr>
+              <tr><th>wichtigste Fähigkeit</th><td>spezielle Ausdauerfähigkeiten (→ <a href="#anaerobe-ausdauer">Tab. 8</a>)</td><td><b>allgemeine aerobe Ausdauer</b> (→ <a href="#aerobe-ausdauer">Thema 14</a>)</td></tr>
+            </tbody>
+          </table></div>
+          <div class="box heft"><span class="box-label">Aus dem Buch · S. 18</span><b>Im Bereich von Gesundheit und Fitness</b> kommt es nicht darauf an, eine sportliche Leistung zu optimieren, sondern in <b>verschiedenen Situationen eine gute allgemeine Leistungsfähigkeit</b> zu besitzen und diese auch <b>längere Zeit aufrecht erhalten</b> zu können. Auch eine gute <b>Erholungsfähigkeit</b> ist von hohem gesundheitlichem Wert.</div>
+          <p>Ob sich ein spezielles Ausdauertraining lohnt, kann nur <b>subjektiv und individuell</b> beantwortet werden (Beweggründe: Anerkennung, Selbstbestätigung, Freude an der Leistung, Note). Die positiven Wirkungen für die Gesundheit gibt es aber nur, wenn die <b>Regeln des Trainings</b> (Intensität, Dauer, Häufigkeit) beachtet werden.</p>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Verbindung zu Kapitel I:</strong> „Fit sein“ setzt <a href="#leistungsfaktoren">alle fünf Leistungsfaktoren</a> voraus – für Gesundheit und Fitness hat aber die <b>allgemeine aerobe Ausdauer die größte Bedeutung</b> (S. 27).</li>
+            <li><strong>Warum Ausdauer statt Kraft für die Gesundheit?</strong> Ausdauertraining belastet viele Organsysteme gleichzeitig (Herz-Kreislauf, Atmung, Stoffwechsel …), Krafttraining meist nur einzelne Muskel- und Gelenksysteme (→ <a href="#aerobe-ausdauer">Wirkungsspektrum</a>).</li>
+            <li><strong>Leistungssport kann sogar schaden:</strong> Die extremen Belastungen im Hochleistungs-Ausdauertraining können negative Auswirkungen auf das Immunsystem haben.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>„Unterscheiden Sie Ausdauer als Leistungsfaktor und Ausdauer im Sinne von Fitness“ → Tabelle im Kopf: <b>Ziel</b> (optimieren vs. allgemeine Leistungsfähigkeit), <b>Ausprägung</b> (speziell vs. vielseitig + lange), <b>Erholung</b>, je ein Beispiel (200-m-Lauf / Alltag).</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=gM-GCpezShE" target="_blank" rel="noopener">Bedeutung der Ausdauer</a> <small>Sporttheorie Leistungskurs · 4:03</small></li>
+            <li><a href="https://www.youtube.com/watch?v=SXPr1zTKgNs" target="_blank" rel="noopener">Begriffe der Ausdauer</a> <small>Sporttheorie Leistungskurs · 4:54</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Worauf kommt es bei Ausdauer im Bereich Gesundheit und Fitness an?</p>
+            <ol><li>Eine sportliche Leistung in einer Disziplin zu optimieren</li><li>In verschiedenen Situationen eine gute allgemeine Leistungsfähigkeit zu haben und sie länger aufrecht zu erhalten</li><li>Möglichst schnell eine kurze Strecke zu laufen</li></ol>
+            <p class="why">Fitness = allgemeine Leistungsfähigkeit in vielen Situationen + lange halten + gute Erholung. Optimieren ist das Ziel im Leistungssport.</p></div>
+          <div class="q" data-a="2"><p>Warum muss Ausdauer im Leistungssport „sehr speziell“ ausgeprägt sein?</p>
+            <ol><li>Weil sonst die Gesundheit leidet</li><li>Weil allgemeine Ausdauer im Leistungssport keine Rolle spielt</li><li>Weil jede Disziplin andere Anforderungen stellt (z. B. 200 m: Schrittlänge halten, Fußball: wiederholt antreten)</li></ol>
+            <p class="why">Die Ausdauer muss zur Disziplin passen, damit die Leistung optimiert wird. Die allgemeine Ausdauer bleibt trotzdem die Grundlage.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="wirkungen" data-show="2">
+        <header class="topic-head"><h3>Wirkungen eines regelmäßigen Ausdauertrainings <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Wer regelmäßig Ausdauer trainiert, verändert fast den ganzen Körper:</p>
+          <ul>
+            <li>Das <strong>Herz</strong> wird größer und stärker – es pumpt mit jedem Schlag mehr Blut und muss deshalb seltener schlagen (niedriger Ruhepuls).</li>
+            <li>Es gibt <strong>mehr Blut</strong> mit mehr rotem Blutfarbstoff → Organe und Muskeln bekommen besser Sauerstoff.</li>
+            <li>Du <strong>erholst</strong> dich schneller, bist seltener krank, weniger gestresst und fühlst dich wohler.</li>
+          </ul>
+          <p class="analogy">Ein trainiertes Herz ist wie eine größere Pumpe: Sie schafft dieselbe Wassermenge mit weniger Hüben – und hat mehr Pause zwischen den Hüben.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="box heft"><span class="box-label">Aus dem Buch · Tab. 6, S. 9 – Wirkungen eines regelmäßigen Ausdauertrainings</span>
+            <div class="tbl"><table><tbody>
+              <tr><th>Herz</th><td>Vergrößerung des Herzmuskels · größeres Schlagvolumen · Absinken von Ruhepuls und Belastungspuls · bessere Durchblutung des Herzmuskels · geringere Belastung des Herzens bei gleicher Leistung</td></tr>
+              <tr><th>Gefäßsystem/Blut</th><td>größere Blutmenge und höherer Hämoglobingehalt · bessere Versorgung der Organe und der Muskulatur mit Sauerstoff und Nährstoffen · günstigere Blutfettwerte, geringeres Risiko für Arteriosklerose · bessere Fließeigenschaften und geringere Thromboseneigung</td></tr>
+              <tr><th>Muskulatur (Energiestoffwechsel)</th><td>bessere Durchblutung · bessere Sauerstoffaufnahme und -verarbeitung</td></tr>
+              <tr><th>Leistung</th><td>bessere Ausdauerleistungsfähigkeit · bessere Leistungsfähigkeit in Beruf, Alltag und Freizeit (Lebensqualität)</td></tr>
+              <tr><th>Regeneration</th><td>schnellere Erholung nach Belastung (physisch und psychisch)</td></tr>
+              <tr><th>Risikofaktoren</th><td>Vorbeugung gegen Herz-Kreislauf-Erkrankungen · Abschwächung von Risikofaktoren: z. B. Bluthochdruck, Übergewicht, Zuckerkrankheit, erhöhte Blutfettwerte</td></tr>
+              <tr><th>Immunsystem</th><td>Stärkung des Immunsystems · vorbeugende Wirkung gegen Tumorerkrankungen</td></tr>
+              <tr><th>Körperform</th><td>Reduktion des Körpergewichts bei Übergewicht · Betonung der Körperformen durch Abbau der Fettpolster</td></tr>
+              <tr><th>Psyche</th><td>besseres Wohlbefinden, weniger ängstlich, weniger depressiv · Abbau von Stress, geringere Wirkung von Stress · Entwicklung von Körperwahrnehmung und Körperbewusstsein · größere Selbstsicherheit und stärkeres Selbstbewusstsein</td></tr>
+            </tbody></table></div>
+          </div>
+          <div class="box merke"><span class="box-label">Merke – pro Bereich 2 Fakten</span>Im Heft markiert: <b>„2 Fakten jeweils“</b> – besonders zu <b>Herz</b> und <b>Gefäßsystem/Blut</b>. Z. B. Herz: <i>größeres Schlagvolumen, niedrigerer Ruhepuls</i>. Blut: <i>größere Blutmenge + mehr Hämoglobin, bessere O₂-Versorgung</i>.</div>
+          <p>Beispiel Rückenschmerzen (Abb. 3): Mit dem Alter steigt die Häufigkeit lumbaler Rückenschmerzen – bei Untrainierten deutlich stärker (mit 60 rund 85 %) als bei Trainierten (rund 33 %).</p>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Warum sinkt der Ruhepuls?</strong> Herzminutenvolumen = Schlagvolumen × Herzfrequenz. Ist das <b>Schlagvolumen größer</b>, reicht für denselben Bedarf eine <b>niedrigere Frequenz</b> → längere Pausen, in denen der Herzmuskel selbst besser durchblutet wird (→ <a href="#anpassungen">ökonomische Herzarbeit</a>).</li>
+            <li><strong>Warum mehr Hämoglobin?</strong> Hämoglobin transportiert den Sauerstoff. Mehr Blut + mehr Hämoglobin = mehr O₂ für die <a href="#aerob-kh">aerobe Energiegewinnung</a>.</li>
+            <li><strong>Kette bilden:</strong> Training → Herz/Blut passen sich an → bessere O₂-Versorgung → mehr aerobe Energie → höhere Leistungsfähigkeit &amp; schnellere Erholung.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>„Erläutern Sie die Wirkungen …“: nicht nur aufzählen, sondern je Wirkung kurz <b>begründen</b>: „Das Schlagvolumen steigt, weil der Herzmuskel kräftiger und die Innenräume größer werden; dadurch sinkt der Ruhepuls.“</div>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>„Die maximale Herzfrequenz steigt durch Training.“ – Falsch: Sie kann durch Training <b>kaum gesteigert</b> werden (S. 26). Es sinken Ruhe- und Belastungspuls.</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=PlFXseKctJc" target="_blank" rel="noopener">Was ist ein Sportlerherz und ist es gefährlich?</a> <small>FormelFroböse · 2:43</small></li>
+            <li><a href="https://www.youtube.com/watch?v=FOe8vw_mWi8" target="_blank" rel="noopener">Ausdauersport: Was passiert, wenn ich regelmäßig jogge?</a> <small>Die Laufpraxis · 12:13</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Welche zwei Wirkungen gehören laut Tab. 6 zum Bereich „Herz“?</p>
+            <ol><li>Größeres Schlagvolumen und Absinken des Ruhepulses</li><li>Höherer Hämoglobingehalt und größere Blutmenge</li><li>Höhere maximale Herzfrequenz und schnellerer Ruhepuls</li></ol>
+            <p class="why">B gehört zu Gefäßsystem/Blut. C ist falsch: Ruhepuls sinkt, die maximale Herzfrequenz bleibt fast gleich.</p></div>
+          <div class="q" data-a="2"><p>Warum schlägt das Herz eines Ausdauertrainierten in Ruhe seltener?</p>
+            <ol><li>Weil der Körper in Ruhe weniger Sauerstoff braucht als beim Untrainierten</li><li>Weil das Blut schneller fließt</li><li>Weil das größere Herz pro Schlag mehr Blut auswirft (größeres Schlagvolumen)</li></ol>
+            <p class="why">Gleicher Bedarf, größeres Schlagvolumen → weniger Schläge nötig = ökonomische Herzarbeit.</p></div>
+          <div class="q" data-a="1"><p>Welche Wirkung gehört zum Bereich „Psyche“?</p>
+            <ol><li>Geringere Thromboseneigung</li><li>Abbau von Stress und geringere Wirkung von Stress</li><li>Bessere Sauerstoffaufnahme im Muskel</li></ol>
+            <p class="why">Psyche: Wohlbefinden, Stressabbau, Körperwahrnehmung, Selbstbewusstsein. A = Blut, C = Muskulatur.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= KAPITEL II ================= -->
+    <section class="chapter" id="kap-2" style="--cc:var(--c2)" data-short="Energie für den Muskel" data-msg="ATP, Laktat, Fette – du weißt jetzt, woher der Muskel seine Energie hat.">
+      <header class="chapter-head">
+        <div class="chapter-no">II</div>
+        <div><div class="overline">Kapitel II · Buch S. 19–23</div><h2>Energie für den Muskel</h2><p class="chapter-desc">Herz-Kreislauf-System und die vier Wege, wie die Muskelzelle ATP gewinnt: anaerob-alaktazid, anaerob-laktazid, aerob aus Kohlenhydraten und aerob aus Fetten.</p></div>
+        <div class="chapter-count"></div>
+      </header>
+
+      <article class="topic" id="herz-kreislauf" data-show="2">
+        <header class="topic-head"><h3>Leistungsbestimmende Faktoren &amp; Herz-Kreislauf-System <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Wenn du läufst, radelst oder schwimmst, braucht dein Muskel plötzlich <strong>viel mehr Energie</strong>. Dafür muss das Herz viel mehr Blut pumpen – und das Blut wird <strong>umverteilt</strong>: Die Muskeln bekommen bis zu <strong>20-mal so viel</strong> Blut wie in Ruhe, die Verdauungsorgane weniger.</p>
+          <p class="analogy">Wie bei einer Stadt im Stau: Bei einem Großeinsatz werden alle Rettungswagen dorthin geschickt, wo es brennt – hier: zu den arbeitenden Muskeln.</p>
+          <p>Wie gut du Ausdauer leisten kannst, hängt an <strong>zwei Dingen</strong>: an den Energie-„Fabriken“ in der Muskelzelle und an Herz, Kreislauf und Atmung, die Nachschub liefern.</p>
+        </div>
+        <div class="level" data-level="2">
+          <p>Bei Belastung großer Muskelgruppen kann die <b>Durchblutung der Muskulatur lokal bis um das 20-fache erhöht</b> werden. Nur so können die Muskelzellen über längere Zeit ausreichend Energie gewinnen. Die Energiebereitstellung wird im Wesentlichen von zwei Bereichen bestimmt:</p>
+          <ol class="steps">
+            <li>der <b>Leistungsfähigkeit der Energiegewinnungswege in der Muskelzelle</b></li>
+            <li>der <b>Leistungsfähigkeit des Herz-Kreislauf-Systems einschließlich der Atmung</b>: Zufuhr der Stoffe zur Energiegewinnung (Glucose, Fettsäuren, Sauerstoff) und Abtransport der Milchsäure und der Endprodukte Kohlendioxid und Wasser</li>
+          </ol>
+          <div class="tbl"><table>
+            <thead><tr><th>Abb. 9</th><th>Ruhe</th><th>maximale Belastung</th></tr></thead>
+            <tbody>
+              <tr><th>Herzminutenvolumen</th><td>5,9 l/min</td><td>24,0 l/min</td></tr>
+              <tr><th>Muskeln</th><td>1.300 ml/min</td><td><b>20.900 ml/min</b></td></tr>
+              <tr><th>Herzmuskel</th><td>250 ml/min</td><td>1.000 ml/min</td></tr>
+              <tr><th>Gehirn</th><td>750 ml/min</td><td>1.000 ml/min</td></tr>
+              <tr><th>Innere Organe</th><td>3.100 ml/min</td><td>600 ml/min</td></tr>
+              <tr><th>Haut, Skelett</th><td>500 ml/min</td><td>500 ml/min</td></tr>
+            </tbody>
+          </table></div>
+          <div class="box merke"><span class="box-label">Leistungsbestimmende Faktoren (Abb. 9)</span><b>Lunge:</b> Gasaustausch · <b>Herz:</b> Förderleistung · <b>Blut:</b> Transport- und Pufferkapazität (Puffer wie Bikarbonate stabilisieren den pH-Wert) · <b>Muskel:</b> Durchblutung (Kapillarisierung) und Energiestoffwechsel</div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Zahlen deuten:</strong> Das Herzminutenvolumen steigt etwa auf das <b>Vierfache</b> (5,9 → 24 l/min). Die Muskeldurchblutung steigt auf das ca. <b>16-fache</b> (1.300 → 20.900 ml/min; Gesamtmuskulatur), lokal bis 20-fach. Die inneren Organe bekommen <b>weniger</b> (3.100 → 600) – das Blut wird umverteilt.</li>
+            <li><strong>Lungenkreislauf und Körperkreislauf:</strong> rechte Herzhälfte → Lunge (O₂ aufnehmen, CO₂ abgeben) → linke Herzhälfte → Körper.</li>
+            <li><strong>Warum „Pufferkapazität“?</strong> Bei anaerober Energiegewinnung entstehen Protonen (Säure, → <a href="#anaerob-laktazid">Laktat</a>). Puffer im Blut fangen sie ab und verzögern die Übersäuerung.</li>
+            <li>Jeder der vier Faktoren ist trainierbar → siehe <a href="#anpassungen">Anpassungen</a> (Herzvergrößerung, Blutvolumen, Kapillarisierung, Mitochondrien).</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Bei Material wie Abb. 9 immer <b>Vergleich mit Faktor</b> angeben („steigt um das Vierfache“) und die Umverteilung begründen: Die arbeitende Muskulatur braucht O₂ und Glucose, Verdauung kann warten.</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=9-21DkWXu4w" target="_blank" rel="noopener">Herzkreislaufsystem</a> <small>Sporttheorie Leistungskurs · 8:43</small></li>
+            <li><a href="https://www.youtube.com/watch?v=ld373__bv2M" target="_blank" rel="noopener">Das Herz und sein Kreislaufsystem</a> <small>Biologie – simpleclub · 6:08</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Um wie viel kann die Muskeldurchblutung bei Belastung lokal steigen?</p>
+            <ol><li>bis um das 2-fache</li><li>bis um das 20-fache</li><li>bis um das 200-fache</li></ol>
+            <p class="why">Laut Buch lokal bis um das 20-fache – nur so bekommen die Muskelzellen genug Energie über längere Zeit.</p></div>
+          <div class="q" data-a="2"><p>Von welchen zwei Bereichen hängt die Energiebereitstellung im Wesentlichen ab?</p>
+            <ol><li>Von Kraft und Beweglichkeit</li><li>Von der Ernährung und vom Schlaf</li><li>Von den Energiegewinnungswegen in der Muskelzelle und vom Herz-Kreislauf-System inkl. Atmung</li></ol>
+            <p class="why">Muskelzelle (Energiegewinnungswege) + Herz-Kreislauf-System/Atmung (Zufuhr von Glucose, Fettsäuren, O₂; Abtransport von Milchsäure, CO₂, Wasser).</p></div>
+          <div class="q" data-a="0"><p>Welche Organe werden bei maximaler Belastung <em>schlechter</em> durchblutet als in Ruhe?</p>
+            <ol><li>Die inneren Organe</li><li>Das Gehirn</li><li>Der Herzmuskel</li></ol>
+            <p class="why">Innere Organe: 3.100 → 600 ml/min. Das Blut wird zur arbeitenden Muskulatur umverteilt.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="atp" data-show="2">
+        <header class="topic-head"><h3>ATP – die Energiewährung der Muskelzelle <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Muskeln können sich nur mit einem einzigen „Treibstoff“ zusammenziehen: <strong>ATP</strong> (Adenosintriphosphat). Beim Zusammenziehen wird eine Phosphatgruppe abgespalten – übrig bleibt <strong>ADP</strong>.</p>
+          <p>Der ATP-Vorrat ist winzig (ca. 7 g!). Deshalb muss die Zelle ATP <strong>ständig neu bauen</strong>. Dafür hat sie <strong>vier Wege</strong> – schnelle mit kleinem Speicher und langsame mit riesigem Speicher.</p>
+          <p class="analogy">ATP ist wie Bargeld im Portemonnaie: Du brauchst es zum Bezahlen, hast aber nur wenig dabei. Nachschub holst du je nach Eile vom Sparschwein (schnell, wenig), vom Girokonto oder vom riesigen Festgeldkonto (Fett – viel, aber langsam).</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="box heft"><span class="box-label">Aus dem Buch · S. 20</span>Alle Muskelzellen benötigen zur Kontraktion das energiereiche Molekül <b>Adenosintriphosphat (ATP)</b>. ATP wird beim Kontraktionsvorgang verbraucht; es wird eine Phosphatgruppe abgespalten und es entsteht <b>Adenosindiphosphat (ADP)</b>. Durch die Spaltung energiereicher Phosphate (<b>Kreatinphosphat (KP)</b> und ADP) und durch den Abbau energiereicher Nährstoffe kann ATP aus ADP und Phosphat wieder <b>resynthetisiert</b> werden.</div>
+          <ul>
+            <li>ATP kann wegen seiner Säurewirkung <b>nicht gespeichert</b> werden: Vorrat bei 70 kg nur ca. <b>7 g</b>; Tagesbedarf ohne Sport ca. <b>70 kg</b> (Vorrat × 10.000). → <b>Die Zellen müssen ATP ständig neu synthetisieren.</b></li>
+            <li>Auf welchem Weg ATP gewonnen wird, <b>hängt primär von der Belastungsintensität ab</b>, d. h. vom ATP-Bedarf der Muskelzelle – Grund: die <b>unterschiedliche Geschwindigkeit</b> der Wege.</li>
+            <li>Von Fetten (D) über Kohlenhydrate mit O₂ (C), Kohlenhydrate ohne O₂ (B) bis zum ATP/KP-Speicher (A) <b>verdoppelt sich die Bildungsrate jeweils</b>: D = 1, C = 2, B = 4, A = 8. → ATP aus energiereichen Phosphaten ist <b>8-mal so schnell</b> wie aus Fetten.</li>
+            <li>Je nach <b>Belastungsdauer</b> entscheidet auch die <b>Größe der Energiespeicher</b>.</li>
+          </ul>
+          <div class="tbl"><table>
+            <thead><tr><th>Speicher (70 kg)</th><th>Größe</th><th>reicht etwa …</th></tr></thead>
+            <tbody>
+              <tr><th>ATP/KP</th><td>100 kJ</td><td>bei hoher Intensität nur <b>wenige Sekunden</b> (ca. 7 s)</td></tr>
+              <tr><th>Kohlenhydrate (Glykogen)</th><td>5.000 kJ</td><td>ohne Belastung ca. <b>einen halben Tag</b> (Tagesbedarf ca. 10.000 kJ); im Marathontempo <b>1–2 Stunden</b> (ca. halbe Marathonstrecke)</td></tr>
+              <tr><th>Fette</th><td>210.000 kJ</td><td>bei normaler Belastung ca. <b>drei Wochen</b> – „fast unerschöpflich“</td></tr>
+            </tbody>
+          </table></div>
+          <div class="box merke"><span class="box-label">Merke</span><b>aerob</b> = mit Sauerstoff, in den <b>Mitochondrien</b> (Wege C und D) · <b>anaerob</b> = ohne Sauerstoff, im <b>Zellplasma</b> (Wege A und B).</div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Grundprinzip:</strong> <b>Je schneller ein Weg, desto kleiner sein Speicher</b> – und umgekehrt. Deshalb kann kein Weg allein alles leisten; sie laufen immer <b>parallel</b>, nur mit wechselnden Anteilen (→ <a href="#laktattest">Kapitel III</a>).</li>
+            <li><strong>Resynthese:</strong> ADP + P → ATP. Die Energie dafür kommt aus KP (A), aus dem Glucoseabbau ohne O₂ (B) oder mit O₂ (C) oder aus Fettsäuren (D).</li>
+            <li><strong>Mitochondrien</strong> = Zellbestandteile, die mit Hilfe von Sauerstoff ATP synthetisieren („Kraftwerke der Zelle“). Durch Training werden sie mehr und größer (→ <a href="#anpassungen">Anpassungen</a>).</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Zu Abb. 10 („Energiegewinnung in der Muskelzelle“) die Pfeilstärken erklären: Die Pfeilstärke steht für die relative ATP-Bildungsrate (1–8). Dazu Speichergrößen nennen und jeweils ein Sportbeispiel (100 m → A/B, Marathon → C/D).</div>
+        </div>
+        <figure class="fig">
+          <svg viewBox="0 0 660 250" role="img" aria-label="Relative ATP-Bildungsrate der vier Energiegewinnungswege mit Speichergröße">
+            <text x="330" y="16" text-anchor="middle" class="t-h">Relative ATP-Bildungsrate (Fette = 1)</text>
+            <line x1="330" y1="28" x2="330" y2="232" class="s-line" stroke-width="1"/>
+            <text x="10" y="52" class="t-s t-b">A · anaerob-alaktazid</text>
+            <text x="10" y="67" class="t-xs t-mute">ATP/KP · 100 kJ · ca. 7 s</text>
+            <rect x="330" y="44" width="288" height="22" class="f-acc"/>
+            <text x="612" y="60" text-anchor="end" class="t-s t-b t-w">8</text>
+            <text x="10" y="104" class="t-s t-b">B · anaerob-laktazid</text>
+            <text x="10" y="119" class="t-xs t-mute">Glykogen/Glucose ohne O₂ · Laktat</text>
+            <rect x="330" y="96" width="144" height="22" class="f-acc" opacity=".75"/>
+            <text x="468" y="112" text-anchor="end" class="t-s t-b t-w">4</text>
+            <text x="10" y="156" class="t-s t-b">C · aerob, Kohlenhydrate</text>
+            <text x="10" y="171" class="t-xs t-mute">5.000 kJ · im Marathontempo 1–2 h</text>
+            <rect x="330" y="148" width="72" height="22" style="fill:var(--water-ink)"/>
+            <text x="396" y="164" text-anchor="end" class="t-s t-b t-w">2</text>
+            <text x="10" y="208" class="t-s t-b">D · aerob, Fette</text>
+            <text x="10" y="223" class="t-xs t-mute">210.000 kJ · ca. 3 Wochen</text>
+            <rect x="330" y="200" width="36" height="22" style="fill:var(--water-ink)" opacity=".75"/>
+            <text x="360" y="216" text-anchor="end" class="t-s t-b t-w">1</text>
+            <text x="480" y="112" class="t-xs t-acc t-b">anaerob (Zellplasma)</text>
+            <text x="410" y="164" class="t-xs t-water t-b">aerob (Mitochondrien)</text>
+            <text x="376" y="216" class="t-xs t-mute">schnell ↔ langsam, Speicher klein ↔ riesig</text>
+          </svg>
+          <figcaption>Nach Abb. 10 (S. 20): Bildungsrate verdoppelt sich von D über C und B bis A. Rot = anaerob, blau = aerob.</figcaption>
+        </figure>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=ZF7a0ZHHu7M" target="_blank" rel="noopener">Energiebereitstellungsprozesse (Übersicht) einfach erklärt</a> <small>SportTheo · 2:39</small></li>
+            <li><a href="https://www.youtube.com/watch?v=syMgK7TPfVc" target="_blank" rel="noopener">Energiebereitstellung im Muskel – Verlauf mit Erklärung + Grafiken</a> <small>Famulus · 5:22</small></li>
+            <li><a href="https://www.youtube.com/watch?v=EeoixBESG5w" target="_blank" rel="noopener">Energiebereitstellung für sportliche Bewegungen – ATP, Kreatin &amp; Co.</a> <small>Die Sportlehrer · 13:31</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="2"><p>Warum muss die Muskelzelle ATP ständig neu bilden?</p>
+            <ol><li>Weil ATP bei Kälte zerfällt</li><li>Weil ATP nur in der Leber gebildet wird</li><li>Weil ATP wegen seiner Säurewirkung kaum gespeichert werden kann (Vorrat nur ca. 7 g)</li></ol>
+            <p class="why">Vorrat ca. 7 g, Bedarf ohne Sport schon ca. 70 kg pro Tag → ständige Resynthese aus ADP und Phosphat.</p></div>
+          <div class="q" data-a="0"><p>Wovon hängt primär ab, auf welchem Weg ATP gewonnen wird?</p>
+            <ol><li>Von der Belastungsintensität (ATP-Bedarf)</li><li>Von der Tageszeit</li><li>Vom Körpergewicht</li></ol>
+            <p class="why">Je höher die Intensität, desto schneller muss ATP nachgebildet werden → schnellere (anaerobe) Wege werden nötig.</p></div>
+          <div class="q" data-a="1"><p>Wie verhalten sich die ATP-Bildungsraten von A (ATP/KP) und D (Fette)?</p>
+            <ol><li>A ist doppelt so schnell wie D</li><li>A ist 8-mal so schnell wie D</li><li>D ist 8-mal so schnell wie A</li></ol>
+            <p class="why">Von D → C → B → A verdoppelt sich die Rate jeweils: 1 → 2 → 4 → 8.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="anaerob-alaktazid" data-show="2">
+        <header class="topic-head"><h3>Anaerob-alaktazide Energiegewinnung (A) <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Der <strong>schnellste</strong> Weg: Jede Muskelzelle hat einen kleinen Vorrat an <strong>Kreatinphosphat (KP)</strong>. Daraus wird sofort ATP – <strong>ohne Sauerstoff</strong> (anaerob) und <strong>ohne Laktat</strong> (alaktazid).</p>
+          <p>Aber: Der Vorrat ist nach etwa <strong>7 Sekunden</strong> leer. Beim 100-m-Lauf reicht er für den Start, danach springt schon der nächste Weg (B) ein.</p>
+          <p class="analogy">Wie der Turbo-Knopf im Videospiel: volle Power sofort, aber nur ein paar Sekunden lang.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="def"><b>anaerob-alaktazid</b> = ATP-Resynthese durch Spaltung energiereicher Phosphate (hpts. Kreatinphosphat) – ohne Sauerstoff (<b>anaerob</b>), ohne Laktatbildung (<b>alaktazid</b>).</div>
+          <ul>
+            <li>Die ATP-Nachbildung verläuft <b>verzögerungsfrei</b> und liefert <b>so viel Energie, wie der Muskel maximal verbrauchen kann</b> (größte Pfeilstärke, Rate 8).</li>
+            <li>Beim <b>100-m-Lauf</b> ist diese maximale Energiebereitstellung erforderlich.</li>
+            <li>Der ATP/KP-Speicher ist so klein, dass er nach ca. <b>7 s</b> aufgebraucht wäre → deshalb wird schon kurz nach dem Start die <b>anaerobe Energiegewinnung aus Kohlenhydraten</b> (B) aktiviert.</li>
+            <li>Ort: <b>Zellplasma</b>.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>„Warum schlucken Sprinter Kreatin?“</strong> (Frage aus dem Buch) – Mehr Kreatin im Muskel kann den KP-Speicher etwas vergrößern → die maximale Energiebereitstellung hält ein wenig länger bzw. erholt sich in Pausen schneller.</li>
+            <li><strong>Sportbeispiele:</strong> Sprintstart, Weitsprung-Absprung, Wurf, Gewichtheben – alles unter ca. 10 s mit maximaler Intensität.</li>
+            <li><strong>Erholung:</strong> Der KP-Speicher füllt sich in Pausen wieder auf – mit Hilfe aerob gebildeten ATPs. Auch hier hilft also eine gute <a href="#grundlagenausdauer">Grundlagenausdauer</a>.</li>
+          </ul>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>„Alaktazid = ohne Sauerstoff.“ – Nein: <b>anaerob</b> heißt ohne Sauerstoff, <b>alaktazid</b> heißt ohne Laktat. Beide Wortteile einzeln erklären!</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=R-6VG7sHdIc" target="_blank" rel="noopener">Alaktazide Energiegewinnung (ohne Laktat) – Kreatinphosphat</a> <small>Dennis Bühl · 3:59</small></li>
+            <li><a href="https://www.youtube.com/watch?v=npu8V3xKMVU" target="_blank" rel="noopener">Energiebereitstellung im Muskel</a> <small>TeacherToby · 7:35</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Was bedeutet „alaktazid“?</p>
+            <ol><li>ohne Sauerstoff</li><li>ohne Laktatbildung</li><li>mit Fettverbrennung</li></ol>
+            <p class="why">a-laktazid = kein Laktat. „Ohne Sauerstoff“ heißt anaerob.</p></div>
+          <div class="q" data-a="2"><p>Warum wird beim 100-m-Lauf schon kurz nach dem Start Weg B aktiviert?</p>
+            <ol><li>Weil Weg A zu langsam ist</li><li>Weil Weg A Laktat bildet</li><li>Weil der ATP/KP-Speicher nach ca. 7 s leer wäre</li></ol>
+            <p class="why">Weg A ist am schnellsten, aber sein Speicher ist winzig (100 kJ, ca. 7 s).</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="anaerob-laktazid" data-show="2">
+        <header class="topic-head"><h3>Anaerob-laktazide Energiegewinnung (B) &amp; Laktat <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Weg B baut <strong>Zucker (Glucose/Glykogen) ohne Sauerstoff</strong> ab. Das geht schnell – doppelt so schnell wie mit Sauerstoff. Dabei entsteht aber <strong>Milchsäure</strong>, die sofort zu <strong>Laktat</strong> und Säure (Protonen) zerfällt.</p>
+          <p>Bei harter Belastung (z. B. 400 m) <strong>übersäuert</strong> der Muskel: Die Beine „brennen“, die Enzyme arbeiten schlechter, du wirst langsamer und musst irgendwann aufhören.</p>
+          <p>Gute Nachricht: Laktat ist <strong>kein Abfall</strong>. Herz, Gehirn und andere Muskeln können es mit Sauerstoff weiter zur Energiegewinnung nutzen.</p>
+          <p class="analogy">Wie ein Kredit: Du bekommst schnell Geld (Energie), aber mit Zinsen (Säure). Mit Sauerstoff zahlst du den Kredit später zurück.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="def"><b>anaerob-laktazid</b> = ATP-Gewinnung aus Kohlenhydraten (Glucose) ohne Sauerstoff; dabei wird <b>Milchsäure</b> gebildet, die sofort in <b>Laktat</b> und Protonen dissoziiert.</div>
+          <ul>
+            <li>Kohlenhydrate liegen vor als <b>Glucose</b> (gelöst im Zell- und Blutplasma) und <b>Glykogen</b> (Speicherform der Glucose, in Muskelzelle und Leber). Die Muskelzelle kann nur <b>Glucose</b> zur ATP-Bildung nutzen; Glykogen muss erst in Glucosemoleküle zerlegt werden. Nachschub kommt als Glucose aus dem Blut (Leber reguliert den Blutzuckerspiegel; Verdauungssystem unreguliert).</li>
+            <li>Ohne Sauerstoff kann die Muskelzelle pro Zeiteinheit etwa <b>doppelt so viel Energie</b> gewinnen wie mit Sauerstoff.</li>
+            <li>Bei intensiven Belastungen führen Laktatbildung und hohe ATP-Spaltungsrate zur <b>Übersäuerung</b> der Muskelzelle und des Blutes → Enzyme arbeiten immer weniger → ATP-Bildungsrate sinkt stark → man <b>ermüdet schnell</b> und muss abbrechen.</li>
+            <li><b>Unökonomisch:</b> Für gleiche ATP-Mengen wird <b>19-mal mehr Glucose</b> verbraucht als beim aeroben Abbau (C).</li>
+            <li>Bei 100, 200, 400 m wird nach wenigen Sekunden viel Laktat gebildet; die Laufgeschwindigkeit sinkt während des Laufs ab.</li>
+          </ul>
+          <div class="box heft"><span class="box-label">Aus dem Buch · S. 21</span>Entgegen früherer Auffassung ist Laktat also <b>kein Endprodukt des Energiestoffwechsels, sondern ein wertvolles Zwischenprodukt</b>, das im Muskel selbst wie auch in anderen Organen zur aeroben Energiegewinnung genutzt werden kann.</div>
+          <ul>
+            <li>Laktat ist noch <b>sehr energiereich</b>: Es wird in weniger belastete Muskelzellen transportiert und bei ausreichend O₂ aerob verwertet (C*). Das <b>Gehirn</b> kann bis zu <b>25 %</b>, das <b>Herz</b> bis zu <b>60 %</b> seines Energiebedarfs mit Laktat decken. In Leber und Muskel dient Laktat als Baustein zur Glykogensynthese.</li>
+            <li>Nach Belastungsende wird der Laktatspiegel in ca. <b>15 Minuten um jeweils die Hälfte</b> gesenkt.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Woher kommt die 19?</strong> Aerob liefert ein Glucosemolekül etwa 19-mal so viel ATP wie anaerob (fachlich: ca. 38 : 2). Darum ist B schnell, aber verschwenderisch.</li>
+            <li><strong>Was ermüdet eigentlich?</strong> Nicht das Laktat selbst, sondern die <b>Protonen</b> (Säure) → pH sinkt → Enzyme werden gehemmt → ATP-Bildung bricht ein.</li>
+            <li><strong>Warum Grundlagenausdauer für Sprinter?</strong> Da Laktat nur mit Sauerstoff weiterverwertet werden kann, ist eine gut funktionierende <b>aerobe Energiegewinnung (Grundlagenausdauer)</b> wichtig für die <b>Erholungsfähigkeit</b> nach intensiven Belastungen.</li>
+            <li>Buch-Tipp zum Selbstversuch: 400 m so schnell wie möglich laufen – dann spürt man die Übersäuerung.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>„Erläutern Sie, warum die Geschwindigkeit beim 400-m-Lauf am Ende sinkt“ → hoher Energiebedarf → anaerob-laktazid → viel Laktat + Protonen → Übersäuerung → Enzymhemmung → ATP-Bildungsrate sinkt → Tempo sinkt.</div>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>„Laktat ist ein Abfallprodukt, das Muskelkater macht.“ – Laut Buch ist Laktat ein <b>wertvolles Zwischenprodukt</b>, das aerob weiterverwertet wird.</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=yGIncEZ5nvg" target="_blank" rel="noopener">Milchsäuregärung und Laktat-Shuttle</a> <small>Sporttheorie Leistungskurs · 7:31</small></li>
+            <li><a href="https://www.youtube.com/watch?v=NvMHmN83pi0" target="_blank" rel="noopener">Energiebereitstellung einfach erklärt &amp; auf Praxis bezogen</a> <small>Karriere als Fitnesstrainer · 10:38</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Warum ist die anaerob-laktazide Energiegewinnung „unökonomisch“?</p>
+            <ol><li>Für gleiche ATP-Mengen wird 19-mal mehr Glucose verbraucht als beim aeroben Abbau</li><li>Sie braucht sehr viel Sauerstoff</li><li>Sie liefert ATP langsamer als der Fettabbau</li></ol>
+            <p class="why">Schnell, aber verschwenderisch: 19-facher Glucoseverbrauch. Sauerstoff braucht sie gar nicht; sie ist 4-mal so schnell wie D.</p></div>
+          <div class="q" data-a="2"><p>Was passiert laut Buch mit dem Laktat?</p>
+            <ol><li>Es wird als Abfallprodukt über den Urin ausgeschieden</li><li>Es bleibt im Muskel und verursacht Muskelkater</li><li>Es wird in anderen Muskelzellen, im Herz, im Gehirn und in der Leber weiterverwertet</li></ol>
+            <p class="why">Laktat ist ein wertvolles Zwischenprodukt: Herz bis 60 %, Gehirn bis 25 % des Energiebedarfs; Leber/Muskel bauen daraus Glykogen.</p></div>
+          <div class="q" data-a="1"><p>Was ist die Ursache für den Belastungsabbruch bei hoher Laktatbildung?</p>
+            <ol><li>Der Fettspeicher ist leer</li><li>Übersäuerung → Enzyme arbeiten schlechter → ATP-Bildungsrate sinkt stark</li><li>Das Herz kann nicht schneller schlagen</li></ol>
+            <p class="why">Laktatbildung + hohe ATP-Spaltungsrate → Übersäuerung von Muskelzelle und Blut → Enzymhemmung → Ermüdung.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="aerob-kh" data-show="2">
+        <header class="topic-head"><h3>Aerobe Energiegewinnung aus Kohlenhydraten (C) <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Mit <strong>Sauerstoff</strong> baut die Zelle Zucker <strong>vollständig</strong> ab – zu Kohlendioxid und Wasser, die du einfach ausatmest bzw. ausscheidest. <strong>Kein Laktat</strong>, keine Übersäuerung.</p>
+          <p>Dafür ist dieser Weg <strong>halb so schnell</strong> wie Weg B. Er reicht also für ruhiges, langes Laufen, Radfahren oder Schwimmen – nicht für einen Sprint.</p>
+          <p class="analogy">Wie ein Kaminfeuer mit genug Luft: brennt sauber und lange. Ohne Luft (anaerob) qualmt und rußt es.</p>
+        </div>
+        <div class="level" data-level="2">
+          <ul>
+            <li><b>Kein Laktat</b>; die mit Hilfe von <b>Sauerstoff (aerob)</b> gebildeten Endprodukte <b>Kohlendioxid (CO₂) und Wasser (H₂O)</b> können ausgeschieden werden → die Enzyme im Muskel werden nicht beeinträchtigt.</li>
+            <li><b>Energieausbeute</b> aus den Kohlenhydraten beim Abbau mit Sauerstoff <b>19-mal höher</b> als ohne Sauerstoff.</li>
+            <li>Solange Sauerstoff zur Verfügung steht, wird <b>unabhängig von der Belastungsintensität vorwiegend mit diesem Weg</b> ATP gebildet.</li>
+            <li><b>Leistungsbegrenzend ist dabei das Sauerstoffangebot für die Muskelzelle</b>, d. h. Herz-Kreislauf-System und Atmung müssen für ausreichende Sauerstoffzufuhr sorgen.</li>
+            <li>Wegen der relativ geringen Bildungsrate (2) reicht der Weg nur bei <b>geringeren Intensitäten</b> (längeres Laufen, Radfahren, Schwimmen, Skilanglauf) – dann aber relativ lange und ohne allzu große Ermüdung.</li>
+            <li>Bei <b>Belastungen über 90 min</b> reichen die Kohlenhydratspeicher in der Regel nicht mehr aus → Energie zunehmend aus <b>Fetten</b>.</li>
+          </ul>
+          <div class="box merke"><span class="box-label">Merke</span>C = Glucose + O₂ → CO₂ + H₂O + viel ATP · Ort: Mitochondrien · Grenze: Sauerstoffangebot.</div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Warum „Nudelparty vor dem Marathon“?</strong> (Sprechblase im Buch) – Kohlenhydratreiche Ernährung füllt die Glykogenspeicher. Da sie nur 1–2 h im Marathontempo reichen, ist jeder zusätzliche Vorrat wertvoll, bevor man auf die langsameren Fette umschalten muss („Mann mit dem Hammer“).</li>
+            <li><strong>Verknüpfung:</strong> Hier wirkt das <a href="#herz-kreislauf">Herz-Kreislauf-System</a>: Je mehr O₂ geliefert wird, desto höher kann die Intensität sein, bevor B dazukommen muss → Laktatkurve nach rechts (→ <a href="#laktattest">Laktattest</a>).</li>
+            <li>Auch Laktat aus Weg B wird über diesen Weg verwertet (C* in Abb. 10).</li>
+          </ul>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>„Aerob wird nur bei niedriger Intensität genutzt.“ – Solange O₂ da ist, wird <b>unabhängig von der Intensität vorwiegend aerob</b> gearbeitet; bei hoher Intensität kommt anaerob <b>dazu</b>.</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=wsJ2Ch1eim4" target="_blank" rel="noopener">Energiebereitstellung im Ausdauersport</a> <small>Sporttheorie Leistungskurs · 5:23</small></li>
+            <li><a href="https://www.youtube.com/watch?v=eDKQJettJtg" target="_blank" rel="noopener">Aerobe Glykolyse – So funktioniert sie!</a> <small>SCYENCE · 5:08</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Was ist bei der aeroben Energiegewinnung aus Kohlenhydraten leistungsbegrenzend?</p>
+            <ol><li>Die Größe des Fettspeichers</li><li>Das Sauerstoffangebot für die Muskelzelle</li><li>Die Laktatbildung</li></ol>
+            <p class="why">Herz-Kreislauf-System und Atmung müssen genug O₂ liefern – das ist die Grenze dieses Weges.</p></div>
+          <div class="q" data-a="0"><p>Welche Endprodukte entstehen bei Weg C?</p>
+            <ol><li>Kohlendioxid und Wasser</li><li>Laktat und Protonen</li><li>Kreatin und Phosphat</li></ol>
+            <p class="why">Vollständiger Abbau mit O₂ → CO₂ + H₂O, beides kann ausgeschieden werden. Laktat entsteht bei Weg B.</p></div>
+          <div class="q" data-a="2"><p>Ab welcher Belastungsdauer reichen die Kohlenhydratspeicher in der Regel nicht mehr aus?</p>
+            <ol><li>ab ca. 7 Sekunden</li><li>ab ca. 10 Minuten</li><li>ab ca. 90 Minuten</li></ol>
+            <p class="why">Über 90 min muss zunehmend Fett abgebaut werden (Weg D).</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="aerob-fett" data-show="2">
+        <header class="topic-head"><h3>Aerobe Energiegewinnung aus Fetten (D) <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Fett ist der <strong>größte Energiespeicher</strong> – er reicht für etwa drei Wochen. Fett kann aber <strong>nur mit Sauerstoff</strong> abgebaut werden und ist der <strong>langsamste</strong> Weg.</p>
+          <p>Zwei Nachteile: Fettabbau braucht <strong>mehr Sauerstoff</strong> (ca. 16 % mehr) und liefert pro Zeit nur <strong>halb so viel</strong> Energie wie Weg C. Wenn der Zucker leer ist, musst du deshalb <strong>langsamer</strong> werden.</p>
+          <p class="analogy">Fett ist wie ein riesiger Holzstapel – genug für den ganzen Winter, aber das Holz brennt langsamer als Papier (Zucker).</p>
+        </div>
+        <div class="level" data-level="2">
+          <ul>
+            <li>Die Energiegewinnung aus Fetten ist <b>nur mit Sauerstoff möglich (aerob)</b>. Die Fette werden in <b>Fettsäuren zerlegt</b> und dann in den Stoffwechselweg des <b>Glucoseabbaus eingeschleust</b>.</li>
+            <li><b>Nachteil 1:</b> Für gleiche ATP-Mengen braucht die Muskelzelle etwa <b>16 % mehr Sauerstoff</b> als bei der aeroben Energiegewinnung aus Kohlenhydraten → stehen nur noch Fette zur Verfügung, muss das <b>Herz-Kreislauf-System bei gleicher Intensität deutlich mehr leisten</b>.</li>
+            <li><b>Nachteil 2:</b> Die <b>pro Zeiteinheit</b> bereitgestellte Energiemenge ist nur etwa <b>halb so groß</b> wie bei C → sind die Glykogenvorräte erschöpft, muss die <b>Belastungsintensität deutlich reduziert</b> werden.</li>
+            <li>Solange Glykogen vorhanden ist, beträgt der Fettsäure-Anteil auch bei geringen Intensitäten nur etwa <b>50 %</b> (aerobe Schwelle).</li>
+            <li>Da der Fettspeicher auch bei Normalgewicht relativ groß ist, sind Fette im Sport eine <b>unerschöpfliche Energiequelle</b> – große Bedeutung für Belastungen <b>über 2 Stunden</b>.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Zusammenspiel:</strong> Fette „brennen im Feuer der Kohlenhydrate“ – sie werden in den Glucoseabbau eingeschleust. Deshalb laufen C und D immer gleichzeitig.</li>
+            <li><strong>Fettverbrennung trainieren:</strong> Die <a href="#dauermethoden">extensive Dauermethode</a> (an der aeroben Schwelle, ca. 100 min) verbessert vor allem die aerobe Energiegewinnung aus Fetten; Training vermehrt die Enzyme zum Fettabbau (→ <a href="#anpassungen">Anpassungen</a>).</li>
+            <li><strong>Schwellen-Zahlen:</strong> Fettanteil an der aeroben Schwelle ca. <b>50 %</b>, an der anaeroben Schwelle nur ca. <b>30 %</b> (→ <a href="#schwellen">Schwellen</a>).</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Vergleichsaufgabe „aerob – anaerob“ als Tabelle beantworten: O₂ ja/nein · Ort · Bildungsrate · Speicher · Endprodukte · Beispiel. Die vier Wege A–D nebeneinander!</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=vyasDwnDq0g" target="_blank" rel="noopener">Fettstoffwechseltraining verstehen</a> <small>Triathlon Crew · 5:01</small></li>
+            <li><a href="https://www.youtube.com/watch?v=44tcF_NAC5E" target="_blank" rel="noopener">Aerobes und anaerobes Training: Was ist der Unterschied?</a> <small>Stiftung Gesundheitswissen · 1:44</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="2"><p>Welche zwei Nachteile hat die Energiegewinnung aus Fetten?</p>
+            <ol><li>Sie bildet Laktat und ist nur kurz verfügbar</li><li>Sie funktioniert nur ohne Sauerstoff und ist teuer</li><li>Sie braucht ca. 16 % mehr O₂ und liefert pro Zeit nur halb so viel Energie wie Weg C</li></ol>
+            <p class="why">Mehr O₂-Bedarf → Herz-Kreislauf muss mehr leisten; halbe Rate → Intensität muss sinken, wenn Glykogen leer ist.</p></div>
+          <div class="q" data-a="0"><p>Für welche Belastungen haben Fette eine große Bedeutung?</p>
+            <ol><li>Für Belastungen über 2 Stunden</li><li>Für den 100-m-Sprint</li><li>Für den 400-m-Lauf</li></ol>
+            <p class="why">Fette = (fast) unerschöpflicher, aber langsamer Speicher → lange Belastungen.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= KAPITEL III ================= -->
+    <section class="chapter" id="kap-3" style="--cc:var(--c3)" data-short="Laktat &amp; Schwellen" data-msg="2 und 4 mmol – du kennst jetzt die wichtigsten Zahlen der Ausdauer.">
+      <header class="chapter-head">
+        <div class="chapter-no">III</div>
+        <div><div class="overline">Kapitel III · Buch S. 23–25</div><h2>Laktat &amp; Schwellen</h2><p class="chapter-desc">Wie man im Stufentest Laktat und Herzfrequenz misst, was aerobe und anaerobe Schwelle bedeuten und warum Trainierte eine nach rechts verschobene Laktatkurve haben.</p></div>
+        <div class="chapter-count"></div>
+      </header>
+
+      <article class="topic" id="laktattest" data-show="2">
+        <header class="topic-head"><h3>Zusammenwirken der Wege &amp; Laktat-Stufentest <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Die vier Energiewege laufen <strong>immer gleichzeitig</strong> – nur der Anteil ändert sich: Je schneller du läufst, desto mehr kommt aus dem anaeroben Weg mit Laktat.</p>
+          <p>Das kann man messen: Auf dem <strong>Laufband</strong> wird das Tempo alle 3 Minuten erhöht, und jedes Mal wird ein Tropfen Blut aus dem <strong>Ohrläppchen</strong> genommen. So sieht man, ab welchem Tempo das Laktat stark ansteigt.</p>
+          <p class="analogy">Wie ein Wasserstandsmelder: Solange der Abfluss mitkommt, bleibt der Pegel ruhig. Läuft mehr zu als ab, steigt er plötzlich steil an.</p>
+          <p>Wer gut trainiert ist, hat bei <strong>gleichem Tempo weniger Laktat</strong> im Blut.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="box heft"><span class="box-label">Aus dem Buch · S. 23</span>Die verschiedenen <b>Energiegewinnungswege laufen in den Muskelzellen immer parallel ab</b>; wie hoch ihr jeweiliger Anteil an der Energiebereitstellung ist, wird durch die <b>Belastungsintensität</b> bestimmt. Durch Messen der Laktatkonzentration im Blut kann man abschätzen, wie stark die anaerob-laktazide Energiegewinnung beansprucht wird und bis zu welcher <b>Belastungsintensität die aufgenommene Sauerstoffmenge ausreicht, um den Energiebedarf über längere Zeit aerob abzudecken</b>.</div>
+          <h4>Testverfahren (Stufentest)</h4>
+          <ol class="steps">
+            <li>Laufband, vorgegebene Geschwindigkeiten; Start im Beispiel bei <b>6 km/h</b>.</li>
+            <li>Erhöhung <b>alle drei Minuten um 2 km/h</b>.</li>
+            <li>Am Ende jeder Stufe: Blutentnahme am <b>Ohrläppchen</b> → <b>Laktatkonzentration</b>.</li>
+            <li>Parallel wird die <b>Herzfrequenz</b> registriert (Auslastung des Herz-Kreislauf-Systems); über die <b>Atemgase</b> kann der Fettsäure-Anteil gemessen werden.</li>
+          </ol>
+          <h4>Beispiel Abb. 11: Tennisspielerin (Kl. 12) vs. Mittelstreckenläuferin (Kl. 11)</h4>
+          <ul>
+            <li>Bei <b>gleicher Laufgeschwindigkeit</b> hat die Tennisspielerin vor allem im oberen Bereich einen <b>deutlich höheren Laktatspiegel</b>; sie bricht bei <b>15 km/h</b> wegen Übersäuerung ab. Die Läuferin läuft bei <b>18 km/h</b> noch gut 3 Minuten → ihre <b>aerobe Kapazität ist deutlich höher</b>.</li>
+            <li>Bei beiden steigt die Laktatkurve <b>erst langsam und dann immer schneller</b> an – die gleichen Stoffwechselsituationen treten nur bei <b>unterschiedlichen Geschwindigkeiten</b> ein.</li>
+            <li>Die Kurve der Läuferin ist <b>nach rechts verschoben</b> → bei gleicher Geschwindigkeit deutlich niedrigerer Laktatspiegel. Ursache: <b>Anpassungen des Stoffwechsels und des Herz-Kreislauf-Systems</b> (→ <a href="#anpassungen">Thema 13</a>).</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Diagramm lesen:</strong> Immer zuerst Achsen nennen (x: Laufgeschwindigkeit km/h; y links: Laktat mmol/l bzw. Herzfrequenz S/min), dann Verlauf beschreiben (flach → exponentiell steigend), dann vergleichen (Rechtsverschiebung), dann erklären (Anpassungen → mehr aerobe Kapazität).</li>
+            <li><strong>Herzfrequenz:</strong> Die Tennisspielerin hat bis zur anaeroben Schwelle bei gleichem Tempo eine <b>20–40 Schläge höhere Herzfrequenz</b> – das größere Herz der Läuferin pumpt über ein größeres Schlagvolumen.</li>
+            <li><strong>„Körper kann Laktat noch abbauen → Gleichgewicht“</strong> (Heftnotiz am grauen Schwellenbereich): Zwischen aerober und anaerober Schwelle steigt das Laktat zwar, aber Produktion und Abbau stehen noch im Gleichgewicht (→ <a href="#schwellen">Schwellen</a>).</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Typische Aufgabe: „Vergleichen Sie die Laktatkurven und erklären Sie die Unterschiede.“ → Beschreiben (Rechtsverschiebung, Abbruch 15 vs. 18 km/h, Schwellen bei 6/11 km/h vs. 11/14,5 km/h) + Erklären (größere aerobe Kapazität: Mitochondrien, Kapillarisierung, Sportherz, Blutvolumen).</div>
+        </div>
+        <figure class="fig">
+          <svg viewBox="0 0 660 300" role="img" aria-label="Laktatkurven der Tennisspielerin und der Mittelstreckenläuferin im Stufentest">
+            <rect x="60" y="192" width="560" height="34" class="f-land"/>
+            <line x1="60" y1="226" x2="620" y2="226" class="s-mute" stroke-dasharray="4 4"/>
+            <line x1="60" y1="192" x2="620" y2="192" class="s-mute" stroke-dasharray="4 4"/>
+            <text x="616" y="222" text-anchor="end" class="t-xs t-mute">aerobe Schwelle 2 mmol/l</text>
+            <text x="616" y="188" text-anchor="end" class="t-xs t-mute">anaerobe Schwelle 4 mmol/l</text>
+            <line x1="60" y1="260" x2="620" y2="260" class="s-ink" stroke-width="1.5" marker-end="url(#arr)"/>
+            <line x1="60" y1="260" x2="60" y2="30" class="s-ink" stroke-width="1.5" marker-end="url(#arr)"/>
+            <g class="t-xs">
+              <text x="60" y="276" text-anchor="middle">6</text><text x="150" y="276" text-anchor="middle">8</text><text x="240" y="276" text-anchor="middle">10</text><text x="330" y="276" text-anchor="middle">12</text><text x="420" y="276" text-anchor="middle">14</text><text x="510" y="276" text-anchor="middle">16</text><text x="600" y="276" text-anchor="middle">18</text>
+              <text x="52" y="230" text-anchor="end">2</text><text x="52" y="196" text-anchor="end">4</text><text x="52" y="162" text-anchor="end">6</text><text x="52" y="128" text-anchor="end">8</text><text x="52" y="94" text-anchor="end">10</text><text x="52" y="60" text-anchor="end">12</text>
+            </g>
+            <text x="340" y="294" text-anchor="middle" class="t-s">Laufgeschwindigkeit (km/h)</text>
+            <text x="18" y="22" class="t-s">Laktat (mmol/l)</text>
+            <path d="M60.0,226.0 C75.0,224.6 120.0,220.6 150.0,217.5 C180.0,214.4 217.5,211.6 240.0,207.3 C262.5,203.1 270.0,196.2 285.0,192.0 C300.0,187.8 315.0,188.0 330.0,181.8 C345.0,175.6 360.0,165.4 375.0,154.6 C390.0,143.8 405.0,135.0 420.0,117.2 C435.0,99.3 457.5,59.1 465.0,47.5" fill="none" class="s-acc" stroke-width="2.6"/>
+            <path d="M60.0,236.2 C75.0,236.1 120.0,236.3 150.0,235.3 C180.0,234.4 217.5,231.8 240.0,230.2 C262.5,228.7 270.0,227.6 285.0,226.0 C300.0,224.4 315.0,223.0 330.0,220.9 C345.0,218.8 360.0,216.4 375.0,213.2 C390.0,210.1 405.0,207.4 420.0,202.2 C435.0,197.0 450.0,188.6 465.0,181.8 C480.0,175.0 495.0,171.0 510.0,161.4 C525.0,151.8 540.0,141.6 555.0,124.0 C570.0,106.4 592.5,67.3 600.0,56.0" fill="none" class="s-water" stroke-width="2.6"/>
+            <circle cx="465" cy="47.5" r="4" class="f-acc"/>
+            <text x="455" y="44" text-anchor="end" class="t-xs t-acc t-b">Tennisspielerin: Abbruch bei 15 km/h</text>
+            <circle cx="600" cy="56" r="4" style="fill:var(--water-ink)"/>
+            <text x="596" y="42" text-anchor="end" class="t-xs t-water t-b">Mittelstreckenläuferin</text>
+            <line x1="285" y1="192" x2="442.5" y2="192" class="s-ink" stroke-width="1.5" marker-end="url(#arr)"/>
+            <text x="278" y="183" text-anchor="end" class="t-xs t-b">Rechtsverschiebung</text>
+          </svg>
+          <figcaption>Schematisch nach Abb. 11 (S. 23): rot = Tennisspielerin, blau = Mittelstreckenläuferin. 4 mmol/l bei ca. 11 bzw. 14,5 km/h.</figcaption>
+        </figure>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=iuqAxya1EHs" target="_blank" rel="noopener">Wie funktioniert ein Laktatstufentest?</a> <small>WIE-GEHT-DAS? · 2:17</small></li>
+            <li><a href="https://www.youtube.com/watch?v=7D8MwDsEYVY" target="_blank" rel="noopener">Laktatstufentest: Ablauf und Auswertung erklärt</a> <small>360° Sport &amp; Health · 9:10</small></li>
+            <li><a href="https://www.youtube.com/watch?v=pstgQ6X6oDI" target="_blank" rel="noopener">Laktat-Leistungskurve verstehen</a> <small>SCYENCE · 6:13</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Was bestimmt den Anteil der einzelnen Energiegewinnungswege?</p>
+            <ol><li>Die Reihenfolge – erst A, dann B, dann C, dann D</li><li>Die Belastungsintensität – die Wege laufen immer parallel</li><li>Die Tageszeit</li></ol>
+            <p class="why">Die Wege laufen immer parallel ab; die Intensität bestimmt, wie groß ihr jeweiliger Anteil ist.</p></div>
+          <div class="q" data-a="2"><p>Was bedeutet eine nach rechts verschobene Laktatkurve?</p>
+            <ol><li>Die Person ist schlechter ausdauertrainiert</li><li>Die Person bildet bei jedem Tempo mehr Laktat</li><li>Bei gleicher Geschwindigkeit ist der Laktatspiegel niedriger → bessere aerobe Ausdauer</li></ol>
+            <p class="why">Rechtsverschiebung = dieselbe Stoffwechselsituation erst bei höherem Tempo → höhere aerobe Kapazität.</p></div>
+          <div class="q" data-a="0"><p>Wie läuft der im Buch beschriebene Stufentest ab?</p>
+            <ol><li>Alle 3 Minuten +2 km/h, am Ende jeder Stufe Laktat aus dem Ohrläppchen, parallel Herzfrequenz</li><li>12 Minuten so weit wie möglich laufen</li><li>Alle 30 Sekunden +1 km/h, Laktat nur am Ende</li></ol>
+            <p class="why">Laufband, Start bei 6 km/h, Stufen à 3 min, +2 km/h, Laktat am Ohrläppchen, Herzfrequenz parallel.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="schwellen" data-show="2">
+        <header class="topic-head"><h3>Aerobe Schwelle, anaerobe Schwelle &amp; Steady State <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Stell dir das Blut wie eine <strong>Badewanne</strong> vor: Oben fließt Laktat hinein (Produktion in den arbeitenden Muskeln), unten fließt es ab (Abbau in Herz, Leber, anderen Muskeln).</p>
+          <ul>
+            <li><strong>Ruhe / locker:</strong> Abfluss schafft alles – Pegel bleibt bei 1–2 mmol/l.</li>
+            <li><strong>Aerobe Schwelle (2 mmol/l):</strong> Es fließt merklich mehr zu, der Abfluss schafft es aber noch.</li>
+            <li><strong>Anaerobe Schwelle (4 mmol/l):</strong> Zufluss = maximaler Abfluss. Gerade noch Gleichgewicht.</li>
+            <li><strong>Darüber:</strong> Es fließt mehr zu als ab – die Wanne läuft über. Du übersäuerst und musst aufhören.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="2">
+          <p><b>Hydraulisches Modell (Abb. 12):</b> Der Laktatspiegel im Blut hängt ab von der <b>Laktat-Produktion</b> in der arbeitenden Muskulatur und der <b>Laktat-Elimination</b> in der unbelasteten Muskulatur und anderen Organen. Durchmesser der Rohre = Gesamtkapazität, Stärke und Länge der Pfeile = jeweilige Rate.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Bereich</th><th>Laktat</th><th>Was passiert?</th></tr></thead>
+            <tbody>
+              <tr><th>Ruhe / geringe Intensität</th><td>ca. 1–2 mmol/l</td><td>Laktatspiegel fast <b>unverändert</b>; <b>Gleichgewicht (Steady State)</b> zwischen Produktion und Elimination; Eliminationskapazität deutlich über der Produktionsrate.</td></tr>
+              <tr><th>Aerobe Schwelle (Laktatschwelle)</th><td>ca. <b>2 mmol/l</b></td><td>Ab hier beginnt der Laktatspiegel <b>deutlich zu steigen</b>; Elimination noch groß genug → <b>nach wie vor Gleichgewicht</b>. Bis zur aeroben Schwelle Energie <b>fast ausschließlich aerob</b> (C, C*, D); <b>Fettanteil ca. 50 %</b>.</td></tr>
+              <tr><th>Aerob-anaerober Übergangsbereich</th><td>2–4 mmol/l</td><td>Benötigte Energie nur durch <b>zusätzliche anaerob-laktazide</b> Energiegewinnung. Laktatspiegel steigt mit der Intensität, Produktion und Elimination aber <b>immer noch im Gleichgewicht</b> → bei konstanter Intensität bleibt der Spiegel auf höherem Niveau konstant.</td></tr>
+              <tr><th>Anaerobe Schwelle</th><td>ca. <b>4 mmol/l</b></td><td><b>Maximales Laktatgleichgewicht = maximales Laktat-Steady-State</b>. Aufgenommene O₂-Menge reicht gerade aus, den Gesamtenergiebedarf zu decken. <b>Fettanteil ca. 30 %</b>. Leistungssportler können sich hier <b>maximal 45 min</b> belasten.</td></tr>
+              <tr><th>Über der anaeroben Schwelle</th><td>steigt stetig</td><td>Noch mehr anaerob-laktazid; <b>Produktion übersteigt die Kapazität der Elimination</b> → Laktatspiegel steigt auch bei konstanter Intensität stetig an → schnelle Ermüdung durch Laktatanhäufung und Übersäuerung → <b>Abbruch</b>.</td></tr>
+            </tbody>
+          </table></div>
+          <div class="box merke"><span class="box-label">Merke</span>Aerobe Schwelle ≈ <b>2 mmol/l</b> (Fett ca. 50 %) · anaerobe Schwelle ≈ <b>4 mmol/l</b> (Fett ca. 30 %, max. Laktat-Steady-State) · darüber: kein Gleichgewicht mehr.</div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Steady State</strong> heißt nicht „kein Laktat“, sondern <b>Gleichgewicht</b>: Was produziert wird, wird auch abgebaut. Darum kann man im Übergangsbereich lange laufen, obwohl mehr Laktat im Blut ist.</li>
+            <li><strong>Warum nur 45 min an der ANS?</strong> Der Laktatspiegel bleibt zwar konstant, aber <b>weitere Ermüdungsprozesse</b> (z. B. leerer werdende Glykogenspeicher) begrenzen die Dauer.</li>
+            <li><strong>Training:</strong> Die Schwellen sind die Grenzen der Trainingsbereiche: Dauermethoden bis zur ANS, Intervallmethoden darüber (→ <a href="#dauermethoden">Kapitel V</a>).</li>
+            <li>Einheit: 1 Mol Laktat = 90 g → 2 mmol Laktat = 180 mg.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Bei „Erklären Sie das Modell“: Begriffe <b>Produktion – Elimination – Gleichgewicht (Steady State)</b> für jeden Bereich benutzen und die Zahlen 2/4 mmol und 50/30 % Fett nennen.</div>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>„Ab der aeroben Schwelle arbeitet der Körper anaerob.“ – Nein: Bis zur aeroben Schwelle fast ausschließlich aerob; im Übergangsbereich kommt anaerob <b>zusätzlich</b> hinzu, der Großteil bleibt aerob.</div>
+        </div>
+        <figure class="fig">
+          <svg viewBox="0 0 660 270" role="img" aria-label="Laktatkurve mit aerober und anaerober Schwelle und den Belastungsbereichen">
+            <rect x="60" y="30" width="180" height="190" class="f-water" opacity=".55"/>
+            <rect x="240" y="30" width="180" height="190" class="f-land"/>
+            <rect x="420" y="30" width="200" height="190" class="f-acc" opacity=".12"/>
+            <line x1="60" y1="176" x2="620" y2="176" class="s-mute" stroke-dasharray="4 4"/>
+            <line x1="60" y1="132" x2="620" y2="132" class="s-mute" stroke-dasharray="4 4"/>
+            <line x1="240" y1="30" x2="240" y2="220" class="s-ink" stroke-width="1.2"/>
+            <line x1="420" y1="30" x2="420" y2="220" class="s-ink" stroke-width="1.2"/>
+            <line x1="60" y1="220" x2="625" y2="220" class="s-ink" stroke-width="1.5" marker-end="url(#arr)"/>
+            <line x1="60" y1="220" x2="60" y2="24" class="s-ink" stroke-width="1.5" marker-end="url(#arr)"/>
+            <path d="M60.0,193.6 C76.7,192.9 130.0,192.1 160.0,189.2 C190.0,186.3 211.7,181.1 240.0,176.0 C268.3,170.9 300.0,165.7 330.0,158.4 C360.0,151.1 391.7,143.7 420.0,132.0 C448.3,120.3 476.7,102.7 500.0,88.0 C523.3,73.3 550.0,51.3 560.0,44.0" fill="none" class="s-acc" stroke-width="2.8"/>
+            <circle cx="240" cy="176" r="4.5" class="f-ink"/>
+            <circle cx="420" cy="132" r="4.5" class="f-ink"/>
+            <text x="52" y="180" text-anchor="end" class="t-xs">2</text>
+            <text x="52" y="136" text-anchor="end" class="t-xs">4</text>
+            <text x="18" y="18" class="t-s">Laktat (mmol/l)</text>
+            <text x="340" y="238" text-anchor="middle" class="t-s">Belastungsintensität →</text>
+            <text x="150" y="48" text-anchor="middle" class="t-s t-b">Ruhe bis aerobe</text>
+            <text x="150" y="62" text-anchor="middle" class="t-s t-b">Schwelle</text>
+            <text x="150" y="77" text-anchor="middle" class="t-xs">fast nur aerob</text>
+            <text x="150" y="89" text-anchor="middle" class="t-xs">Fett ca. 50 %</text>
+            <text x="330" y="48" text-anchor="middle" class="t-s t-b">aerob-anaerober</text>
+            <text x="330" y="62" text-anchor="middle" class="t-s t-b">Übergangsbereich</text>
+            <text x="330" y="77" text-anchor="middle" class="t-xs">Laktat steigt, aber</text>
+            <text x="330" y="89" text-anchor="middle" class="t-xs">noch Gleichgewicht</text>
+            <text x="530" y="150" text-anchor="middle" class="t-s t-b">über der ANS</text>
+            <text x="530" y="164" text-anchor="middle" class="t-xs">Produktion &gt; Elimination</text>
+            <text x="530" y="194" text-anchor="middle" class="t-xs">→ Übersäuerung, Abbruch</text>
+            <text x="246" y="196" class="t-xs t-b">aerobe Schwelle</text>
+            <text x="412" y="103" text-anchor="end" class="t-xs t-b">anaerobe Schwelle</text>
+            <text x="412" y="115" text-anchor="end" class="t-xs t-mute">max. Laktat-Steady-State</text>
+            <text x="412" y="126" text-anchor="end" class="t-xs t-mute">Fett ca. 30 %</text>
+            <text x="240" y="256" text-anchor="middle" class="t-xs t-mute">≈ 2 mmol/l</text>
+            <text x="420" y="256" text-anchor="middle" class="t-xs t-mute">≈ 4 mmol/l</text>
+          </svg>
+          <figcaption>Belastungsbereiche und Schwellen (schematisch, Durchschnittswerte 2 und 4 mmol/l nach S. 24–25).</figcaption>
+        </figure>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=genX5vta9vM" target="_blank" rel="noopener">Aerobe und anaerobe Schwelle · Laktat steady state · IAS, IANS einfach erklärt</a> <small>360° Sport &amp; Health · 8:17</small></li>
+            <li><a href="https://www.youtube.com/watch?v=q0cPz2v0__E" target="_blank" rel="noopener">Die anaerobe Schwelle</a> <small>Sporttheorie Leistungskurs · 4:55</small></li>
+            <li><a href="https://www.youtube.com/watch?v=umI0ZCUyXMA" target="_blank" rel="noopener">Aerobe &amp; anaerobe Schwelle – Laktat wann und wie?</a> <small>Hope Street · 5:13</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Was kennzeichnet die anaerobe Schwelle?</p>
+            <ol><li>Maximales Laktat-Steady-State: Produktion und Elimination stehen gerade noch im Gleichgewicht (ca. 4 mmol/l)</li><li>Ab hier wird gar kein Laktat mehr abgebaut</li><li>Ab hier beginnt der Laktatspiegel erstmals zu steigen (ca. 2 mmol/l)</li></ol>
+            <p class="why">C beschreibt die aerobe Schwelle. An der ANS herrscht das maximale Laktatgleichgewicht.</p></div>
+          <div class="q" data-a="2"><p>Was passiert über der anaeroben Schwelle bei <em>konstanter</em> Intensität?</p>
+            <ol><li>Der Laktatspiegel bleibt konstant</li><li>Der Laktatspiegel sinkt langsam</li><li>Der Laktatspiegel steigt stetig an, weil die Produktion die Elimination übersteigt</li></ol>
+            <p class="why">Kein Gleichgewicht mehr → Laktatanhäufung, Übersäuerung, schnelle Ermüdung, Abbruch.</p></div>
+          <div class="q" data-a="1"><p>Wie hoch ist der Fettanteil an der Energiebereitstellung an der aeroben bzw. anaeroben Schwelle?</p>
+            <ol><li>ca. 90 % bzw. 70 %</li><li>ca. 50 % bzw. 30 %</li><li>ca. 10 % bzw. 50 %</li></ol>
+            <p class="why">Aerobe Schwelle ca. 50 %, anaerobe Schwelle ca. 30 % – mit steigender Intensität sinkt der Fettanteil.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="individuelle-schwelle" data-show="2">
+        <header class="topic-head"><h3>Individuelle Schwellen &amp; Laktatkinetik <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Die Zahlen 2 und 4 mmol/l sind nur <strong>Durchschnittswerte</strong>. Jeder Mensch hat seine <strong>eigenen</strong> Schwellen. Die Übergänge sind <strong>fließend</strong>, nicht wie ein Lichtschalter.</p>
+          <p>Bei der Läuferin aus dem Beispiel liegen beide Schwellen bei viel <strong>höherem Tempo</strong> als bei der Tennisspielerin: aerobe Schwelle bei 11 statt 6 km/h, anaerobe bei 14,5 statt 11 km/h.</p>
+          <p class="analogy">Wie Schuhgrößen: „Größe 40“ passt im Durchschnitt – aber deinen Schuh musst du anprobieren.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="tbl"><table>
+            <thead><tr><th>Abb. 11 (Durchschnittswerte)</th><th>aerobe Schwelle (2 mmol/l)</th><th>anaerobe Schwelle (4 mmol/l)</th></tr></thead>
+            <tbody>
+              <tr><th>Tennisspielerin</th><td>schon bei <b>6 km/h</b></td><td>ca. <b>11 km/h</b></td></tr>
+              <tr><th>Mittelstreckenläuferin</th><td>erst bei <b>11 km/h</b></td><td>ca. <b>14,5 km/h</b></td></tr>
+            </tbody>
+          </table></div>
+          <ul>
+            <li>Der stetige Anstieg der Kurven zeigt: Die Übergänge zwischen den Belastungssituationen sind <b>fließend</b>, die Anteile der Wege ändern sich <b>kontinuierlich</b> mit der Intensität. Das maximale Laktat-Steady-State lässt sich aber relativ sicher festlegen → deshalb große Bedeutung der <b>Laktatkinetik</b> in Leistungsdiagnostik und Trainingssteuerung.</li>
+            <li>Statt der fixen Werte 2 und 4 mmol/l ermittelt man <b>individuelle Schwellenwerte</b> bzw. Belastungsbereiche. Die aerobe Schwelle kann über oder unter 2 mmol/l liegen.</li>
+            <li>Die <b>individuelle anaerobe Schwelle (IANS)</b> liegt bei <b>Untrainierten zwischen 5–6</b> und bei <b>Trainierten zwischen 2,5–3 mmol/l</b>.</li>
+            <li>Bei der Mittelstreckenläuferin liegen beide Schwellen <b>deutlich unter</b> den Durchschnittswerten; bei der Tennisspielerin liegt die aerobe Schwelle deutlich unter 2 mmol/l.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Warum ist das wichtig?</strong> Wer nach fixen 4 mmol/l trainiert, liegt als Trainierter womöglich schon <b>über</b> seiner IANS (2,5–3 mmol/l) → übersäuert früher als geplant. Als Untrainierter (IANS 5–6) läge er dagegen eher zu niedrig.</li>
+            <li><strong>Rechenbeispiel aus dem Buch (Tab. 11):</strong> Herzfrequenz an den fixen Schwellen: Tennisspielerin 152 S/min (aerob) und 188 S/min (anaerob), Läuferin 168 und 191 S/min – Ruhepuls 80 bzw. 60, HFmax je 210 (→ <a href="#herzfrequenz">Trainingspuls</a>).</li>
+            <li>Buch-Frage: „Welche Coopertest-Leistungen würden die beiden bei einer Geschwindigkeit an der ANS erreichen?“ – 12 min × 11 km/h = <b>2.200 m</b> (Tennisspielerin) bzw. 12 min × 14,5 km/h = <b>2.900 m</b> (Läuferin) (→ <a href="#cooper">Cooper-Test</a>).</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Geschwindigkeit in Strecke umrechnen: km/h × Minuten ÷ 60 = km. 14,5 × 12 ÷ 60 = 2,9 km.</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=N1mhM53y5Qo" target="_blank" rel="noopener">Laktatschwelle – anaerobe Schwelle einfach erklärt</a> <small>Famulus · 6:17</small></li>
+            <li><a href="https://www.youtube.com/watch?v=ik55YhdwFv4" target="_blank" rel="noopener">Anaerobe Schwelle erklärt in 3 Minuten</a> <small>Sciodoo · 4:07</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Wo liegt laut Buch die individuelle anaerobe Schwelle (IANS) bei Trainierten?</p>
+            <ol><li>immer genau bei 4 mmol/l</li><li>zwischen 2,5 und 3 mmol/l</li><li>zwischen 5 und 6 mmol/l</li></ol>
+            <p class="why">Trainierte 2,5–3 mmol/l, Untrainierte 5–6 mmol/l. 4 mmol/l ist nur der Durchschnittswert.</p></div>
+          <div class="q" data-a="0"><p>Bei welcher Geschwindigkeit erreicht die Mittelstreckenläuferin die anaerobe Schwelle (4 mmol/l)?</p>
+            <ol><li>ca. 14,5 km/h</li><li>ca. 11 km/h</li><li>ca. 6 km/h</li></ol>
+            <p class="why">Läuferin: aerob 11, anaerob 14,5 km/h. Tennisspielerin: aerob 6, anaerob 11 km/h.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= KAPITEL IV ================= -->
+    <section class="chapter" id="kap-4" style="--cc:var(--c4)" data-short="Ausdauerfähigkeiten" data-msg="Aerob, Grundlagen, anaerob – die Ausdauerarten sind sortiert.">
+      <header class="chapter-head">
+        <div class="chapter-no">IV</div>
+        <div><div class="overline">Kapitel IV · Buch S. 26–30</div><h2>Anpassungen &amp; Ausdauer&shy;fähigkeiten</h2><p class="chapter-desc">Was Training in Muskelzelle und Herz-Kreislauf-System verändert und welche Ausdauerfähigkeiten es gibt: allgemeine aerobe Ausdauer, Grundlagenausdauer, anaerobe und spezielle Ausdauer.</p></div>
+        <div class="chapter-count"></div>
+      </header>
+
+      <article class="topic" id="anpassungen" data-show="2">
+        <header class="topic-head"><h3>Anpassungen durch Ausdauertraining (Sportherz)</h3></header>
+        <div class="level" data-level="1">
+          <p>Warum hat die Läuferin weniger Laktat und einen niedrigeren Puls? Weil sich ihr Körper durch Training <strong>angepasst</strong> hat:</p>
+          <ul>
+            <li>In den Muskelzellen gibt es <strong>mehr und größere Mitochondrien</strong> (Kraftwerke).</li>
+            <li>Es wachsen <strong>mehr feine Blutgefäße</strong> (Kapillaren) in den Muskel.</li>
+            <li>Das <strong>Herz wird größer</strong> und pumpt pro Schlag fast doppelt so viel Blut.</li>
+            <li>Es gibt <strong>mehr Blut</strong>, das mehr Sauerstoff transportiert.</li>
+          </ul>
+          <p class="analogy">Mehr Kraftwerke + mehr Straßen + stärkere Pumpe + mehr Lieferwagen = mehr Energie ohne Stau.</p>
+        </div>
+        <div class="level" data-level="2">
+          <h4>Anpassungen der Muskelzelle</h4>
+          <ul>
+            <li>Die Enzymwirkung zum <b>aeroben Abbau der Kohlenhydrate</b> wird durch eine <b>Zunahme und Vergrößerung der Mitochondrien</b> verstärkt.</li>
+            <li>Die <b>Enzyme zum Abbau der Fette</b> in Fettsäuren werden vermehrt gebildet.</li>
+          </ul>
+          <h4>Anpassungen des Herz-Kreislauf-Systems</h4>
+          <ul>
+            <li><b>Kapillarisierung:</b> Zahl der Kapillaren pro Muskelfaser und ihr Querschnitt werden größer → bessere Muskeldurchblutung.</li>
+            <li><b>Herzvergrößerung:</b> Innenräume erweitert, Herzmuskel kräftiger → <b>Schlagvolumen</b> (Blutmenge pro Herzschlag) kann sich fast <b>verdoppeln</b>. Die <b>maximale Herzfrequenz</b> kann durch Training <b>kaum gesteigert</b> werden.</li>
+            <li><b>Blutvolumen nimmt zu</b> → mehr Sauerstoff (ca. 30 %) und die Übersäuerung durch Milchsäure wird hinausgezögert.</li>
+          </ul>
+          <p>Folge: höhere Kapazität der aeroben Energiegewinnung → anaerob-laktazid erst bei höheren Intensitäten → <b>Laktatkurve nach rechts verschoben</b>. Die geringere HF der Läuferin im unteren Bereich erklärt sich durch die Pumpleistung über das größere Schlagvolumen.</p>
+          <div class="box merke"><span class="box-label">Weitere Vorteile des größeren Herzens</span><b>Ökonomische Herzarbeit:</b> größeres Schlagvolumen → geringere HF in Ruhe (<b>Ruhepuls</b>) und bei submaximaler Belastung → längere Pausen, Herzmuskel besser durchblutet und mit O₂ versorgt.<br><b>Abbau von Laktat, Erholungsfähigkeit:</b> Herzmuskelzellen gewinnen Energie aus Laktat und Fettsäuren → größeres Herz verzögert den Laktatanstieg und beschleunigt durch raschen Laktatabbau die Erholung.</div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Jede Anpassung einem Faktor aus Abb. 9 zuordnen:</strong> Herz → Förderleistung; Blutvolumen → Transportkapazität; Kapillarisierung → Durchblutung; Mitochondrien/Enzyme → Energiestoffwechsel (→ <a href="#herz-kreislauf">Thema 4</a>).</li>
+            <li><strong>Training gezielt:</strong> Kapillarisierung und Mitochondrien lassen sich mit der <a href="#intervallmethoden">extensiven Intervallmethode</a> gezielter trainieren als mit der intensiven Dauermethode.</li>
+            <li>Zahlenbeispiel aus dem Text: Trotz gleichem Tempo hat die Tennisspielerin bis zur ANS eine <b>20–40 Schläge höhere Herzfrequenz</b>.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>„Erklären Sie die unterschiedlichen Herzfrequenzkurven“ → Sportherz → größeres Schlagvolumen → gleiches Herzminutenvolumen bei geringerer Frequenz (ökonomische Herzarbeit).</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=dzdGc0Exs_Y" target="_blank" rel="noopener">Was ist ein Sportherz und ab wann sollte man abtrainieren?</a> <small>Präventive Sportmedizin und Sportkardiologie TUM · 5:08</small></li>
+            <li><a href="https://www.youtube.com/watch?v=zRQBP7_P6l0" target="_blank" rel="noopener">Was limitiert die Ausdauer? Herz-Kreislauf-System vs. Mitochondrien</a> <small>Triathlon Crew · 12:45</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="2"><p>Was bedeutet „Kapillarisierung“?</p>
+            <ol><li>Vergrößerung des Herzens</li><li>Zunahme der Mitochondrien</li><li>Mehr und weitere Kapillaren pro Muskelfaser → bessere Muskeldurchblutung</li></ol>
+            <p class="why">Kapillaren = feinste Blutgefäße. Mehr davon → mehr O₂ und Nährstoffe am Muskel.</p></div>
+          <div class="q" data-a="0"><p>Was verändert sich durch Ausdauertraining am Herzen <em>nicht</em> wesentlich?</p>
+            <ol><li>Die maximale Herzfrequenz</li><li>Das Schlagvolumen</li><li>Der Ruhepuls</li></ol>
+            <p class="why">Schlagvolumen steigt (fast doppelt), Ruhepuls sinkt – die maximale Herzfrequenz kann kaum gesteigert werden.</p></div>
+          <div class="q" data-a="1"><p>Warum verschiebt sich die Laktatkurve durch Ausdauertraining nach rechts?</p>
+            <ol><li>Weil Trainierte kein Laktat mehr bilden</li><li>Weil die aerobe Kapazität steigt und anaerob-laktazid erst bei höherer Intensität nötig wird</li><li>Weil das Blut weniger Sauerstoff braucht</li></ol>
+            <p class="why">Mehr Mitochondrien, Kapillaren, Blut und Herzleistung → mehr aerob → Laktat steigt erst später.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="aerobe-ausdauer" data-show="2">
+        <header class="topic-head"><h3>Allgemeine aerobe Ausdauer <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Für <strong>Gesundheit und Fitness</strong> ist die <strong>allgemeine aerobe Ausdauer</strong> am wichtigsten: Du bewegst dich so, dass dein Körper <strong>genug Sauerstoff</strong> bekommt – zügig, aber ohne zu übersäuern (unter der anaeroben Schwelle).</p>
+          <p>Wichtig: mindestens <strong>1/7 deiner Muskeln</strong> muss arbeiten (etwa ein ganzes Bein), sonst werden Herz und Kreislauf nicht genug gefordert. Laufen, Radfahren, Schwimmen – ja. Nur Bizeps-Curls – nein.</p>
+          <p class="analogy">Wie ein Motor im Dauerbetrieb bei mittlerer Drehzahl: läuft lange, läuft sauber – und hält den ganzen Wagen in Schuss.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="box heft"><span class="box-label">Aus dem Buch · S. 27 – allgemeine aerobe Ausdauer (aerobe Kapazität)</span>Die Belastungsintensität liegt <b>unter der anaeroben Schwelle</b>. Die Energiegewinnung ist <b>vorwiegend aerob</b>. Die aufgenommene Sauerstoffmenge reicht aus, um die benötigte Energiemenge bereitzustellen (<b>Sauerstoffgleichgewicht = Steady-State</b>).</div>
+          <ul>
+            <li>Seit Jahrzehnten gesichert: Vor allem mit Belastungen im <b>aeroben Bereich</b> werden langfristig gesundheitliche Wirkungen und eine Verbesserung der Fitness erreicht.</li>
+            <li>Da Laktat letzten Endes aerob abgebaut wird, ist die <b>Gesamtbilanz entscheidend</b>: Solange das Gesamtsystem im Steady-State ist, ist die Bilanz immer aerob.</li>
+            <li>Für eine trainingswirksame Belastung des Herz-Kreislauf-Systems muss <b>mindestens 1/7 der Muskulatur</b> eingesetzt werden.</li>
+            <li>Fast ausschließlich anaerobe Belastungen haben einen <b>geringen gesundheitlichen Wert</b> (Herz-Kreislauf und Atmung werden nicht ausreichend belastet).</li>
+          </ul>
+          <div class="box heft"><span class="box-label">Aus dem Buch · S. 27</span>Von den physischen Leistungsfaktoren hat die <b>Ausdauer, speziell die allgemeine aerobe Ausdauer, für Gesundheit und Fitness die größte Bedeutung</b>. Das <b>Training der allgemeinen aeroben Ausdauer</b> hat ein <b>breites Wirkungsspektrum</b>. Die Belastungsreize erhalten und verbessern die Funktionsfähigkeit vieler Organe und Organsysteme.</div>
+          <p><b>Wirkungsspektrum (Abb. 13):</b> Skelett · Muskulatur · Energiestoffwechsel · Herz-Kreislauf-System · Blut · Atmung · Immunsystem · Hormonsystem · Nervensystem (Gehirn), vegetatives Nervensystem, Psyche. – Kraft-, Schnelligkeits- und Beweglichkeitstraining sprechen fast immer nur <b>einzelne Muskel- und Gelenksysteme</b> an.</p>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Gegenargument Leistungssport:</strong> Spezielles Ausdauertraining wirkt zwar auch positiv auf viele Systeme, im Vordergrund steht aber die Disziplin; extreme Belastungen im Hochleistungssport können sogar dem <b>Immunsystem</b> schaden.</li>
+            <li><strong>Ausnahme bei Kraft:</strong> Kraftausdauertraining belastet Herz-Kreislauf und Atmung durchaus.</li>
+            <li><strong>Verknüpfung zu „fit sein“:</strong> genau diese Fähigkeit ist gemeint, wenn das Buch von allgemeiner Leistungsfähigkeit in verschiedenen Situationen spricht (→ <a href="#ausdauer-fit">Thema 2</a>).</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>„Begründen Sie, warum Ausdauertraining unter Gesundheitsaspekten sinnvoller ist als Krafttraining“ → breites Wirkungsspektrum (Abb. 13) vs. einzelne Muskel-/Gelenksysteme; HKS + Atmung nur bei Ausdauer ausreichend belastet; mind. 1/7 der Muskulatur.</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=SRhbjzHbpW0" target="_blank" rel="noopener">Ausdauer – Grundbegriffe und Konzepte – ein Überblick</a> <small>Mr V Englisch und Sport · 15:34</small></li>
+            <li><a href="https://www.youtube.com/watch?v=OVVkiFwWOwU" target="_blank" rel="noopener">Sport und Gesundheit</a> <small>Sporttheorie Leistungskurs · 4:41</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Wo liegt die Belastungsintensität bei der allgemeinen aeroben Ausdauer?</p>
+            <ol><li>Über der anaeroben Schwelle</li><li>Unter der anaeroben Schwelle</li><li>Genau bei 1–2 mmol/l Laktat</li></ol>
+            <p class="why">Unter der ANS, vorwiegend aerob, Sauerstoffgleichgewicht (Steady-State).</p></div>
+          <div class="q" data-a="2"><p>Wie viel der Muskulatur muss mindestens eingesetzt werden, damit das Herz-Kreislauf-System trainiert wird?</p>
+            <ol><li>1/2</li><li>1/20</li><li>1/7 (etwa ein Bein)</li></ol>
+            <p class="why">Mindestens 1/7 der Skelettmuskulatur – das entspricht etwa dem Muskelanteil eines Beines.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="grundlagenausdauer" data-show="2">
+        <header class="topic-head"><h3>Grundlagenausdauer &amp; Erholungsfähigkeit</h3></header>
+        <div class="level" data-level="1">
+          <p>Die <strong>Grundlagenausdauer</strong> ist das Fundament für jede Sportart: lange, locker, <strong>ganz im aeroben Bereich</strong> (bis zur aeroben Schwelle).</p>
+          <p>Ihr großer Vorteil: Du <strong>erholst dich schneller</strong>. Wer einen niedrigen Ruhepuls hat, dessen Puls fällt nach einer Belastung viel schneller ab – im Circuit oder im Fußballspiel kannst du dann gleich wieder Gas geben.</p>
+          <p class="analogy">Wie das Fundament eines Hauses: Man sieht es nicht, aber ohne es kann man kein hohes Stockwerk (Sprint, 400 m) draufbauen.</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="box heft"><span class="box-label">Aus dem Buch · S. 29</span><b>Grundlagenausdauer</b> ist die sportartenunabhängige Ermüdungswiderstandsfähigkeit bei Langzeitbelastungen unter dem Einsatz großer Muskelgruppen (mehr als 1/7 der Skelettmuskulatur). Die Belastungsintensität reicht <b>bis zur aeroben Schwelle</b>, die Energiegewinnung ist <b>fast ausschließlich aerob</b>.</div>
+          <ul>
+            <li>Spezielle Ausdauerfähigkeiten (z. B. 400 m vs. 1500 m) lassen sich nur auf einer <b>stabilen Ausdauergrundlage</b> entwickeln.</li>
+            <li>Unterschied zur allgemeinen aeroben Ausdauer: Man belastet <b>ausschließlich im aeroben Bereich</b>; die anaeroben Anteile für die sportliche Leistung werden <b>spezifisch</b> trainiert.</li>
+            <li>Breites Wirkungsspektrum wie die allgemeine aerobe Ausdauer; stabilisiert den Körper gegen hohe Belastungen und <b>verkürzt die Erholungszeiten</b> (Energiestoffwechsel, Herz-Kreislauf, Blut, Atmung).</li>
+          </ul>
+          <h4>Erholungsfähigkeit (Abb. 14 und 15)</h4>
+          <ul>
+            <li>Nach einer Circuit-Station: Bei 90 s Pause fällt die HF der Gruppe mit <b>Ruhepuls 64</b> auf etwa <b>100 S/min</b>, bei der Gruppe mit <b>Ruhepuls 85</b> liegt sie noch bei <b>140 S/min</b>.</li>
+            <li>Wer einen hohen Ruhepuls hat, erholt sich langsam und hat große Mühe, den Circuit durchzustehen. Ähnliches gilt für <b>Ballspiele</b> (Wechsel von hoher und niedriger Intensität).</li>
+            <li>In <b>Alltagssituationen</b> (Liegen, Stehen/Gehen, Treppensteigen, Sitzen) ist das Herz des Untrainierten deutlich stärker belastet und die Erholung verläuft langsamer.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Warum erholt man sich mit GA schneller?</strong> Laktat wird nur mit O₂ weiterverwertet und der KP-Speicher wird aerob wieder aufgefüllt → eine starke aerobe Energiegewinnung beschleunigt beides (→ <a href="#anaerob-laktazid">Weg B</a>).</li>
+            <li><strong>Buch-Rechenaufgabe:</strong> Wie viel öfter schlägt ein untrainiertes Herz (z. B. 80 S/min) im Vergleich zum trainierten (60 S/min)? 20 Schläge/min × 60 = <b>1.200 pro Stunde</b>, × 24 = <b>28.800 pro Tag</b>.</li>
+            <li>„Ausdauertraining scheint ja wirklich ein Allheilmittel zu sein“ – Training der GA hat nicht nur für Gesundheit und Fitness, sondern für die <b>Entwicklung jeder sportlichen Leistung</b> eine positive Wirkung.</li>
+          </ul>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>Grundlagenausdauer und allgemeine aerobe Ausdauer verwechseln: GA reicht nur <b>bis zur aeroben Schwelle</b>, allgemeine aerobe Ausdauer bis <b>unter die anaerobe Schwelle</b>.</div>
+        </div>
+        <figure class="fig">
+          <svg viewBox="0 0 660 290" role="img" aria-label="Erholungspuls nach Belastung bei Ruhepuls 85 und 64">
+            <line x1="60" y1="250" x2="625" y2="250" class="s-ink" stroke-width="1.5" marker-end="url(#arr)"/>
+            <line x1="60" y1="250" x2="60" y2="20" class="s-ink" stroke-width="1.5" marker-end="url(#arr)"/>
+            <g class="s-line" stroke-width="1">
+              <line x1="60" y1="210" x2="610" y2="210"/><line x1="60" y1="170" x2="610" y2="170"/><line x1="60" y1="130" x2="610" y2="130"/><line x1="60" y1="90" x2="610" y2="90"/><line x1="60" y1="50" x2="610" y2="50"/>
+            </g>
+            <line x1="330" y1="40" x2="330" y2="250" class="s-mute" stroke-dasharray="4 4"/>
+            <g class="t-xs">
+              <text x="52" y="214" text-anchor="end">80</text><text x="52" y="174" text-anchor="end">100</text><text x="52" y="134" text-anchor="end">120</text><text x="52" y="94" text-anchor="end">140</text><text x="52" y="54" text-anchor="end">160</text>
+              <text x="60" y="266" text-anchor="middle">0:00</text><text x="240" y="266" text-anchor="middle">1:00</text><text x="420" y="266" text-anchor="middle">2:00</text><text x="600" y="266" text-anchor="middle">3:00</text>
+            </g>
+            <text x="18" y="14" class="t-s">Herzfrequenz (S/min)</text>
+            <text x="340" y="284" text-anchor="middle" class="t-s">Zeit nach der Belastung (min)</text>
+            <path d="M60.0,34.0 C70.0,38.0 100.0,52.0 120.0,58.0 C140.0,64.0 160.0,66.3 180.0,70.0 C200.0,73.7 220.0,77.0 240.0,80.0 C260.0,83.0 280.0,85.7 300.0,88.0 C320.0,90.3 340.0,92.0 360.0,94.0 C380.0,96.0 400.0,98.3 420.0,100.0 C440.0,101.7 460.0,101.7 480.0,104.0 C500.0,106.3 520.0,113.0 540.0,114.0 C560.0,115.0 590.0,110.7 600.0,110.0" fill="none" class="s-acc" stroke-width="2.6"/>
+            <path d="M60.0,54.0 C70.0,61.0 100.0,85.3 120.0,96.0 C140.0,106.7 160.0,111.0 180.0,118.0 C200.0,125.0 220.0,130.7 240.0,138.0 C260.0,145.3 280.0,155.3 300.0,162.0 C320.0,168.7 340.0,173.0 360.0,178.0 C380.0,183.0 400.0,188.7 420.0,192.0 C440.0,195.3 460.0,195.7 480.0,198.0 C500.0,200.3 520.0,202.3 540.0,206.0 C560.0,209.7 590.0,217.7 600.0,220.0" fill="none" class="s-water" stroke-width="2.6"/>
+            <text x="440" y="90" class="t-xs t-acc t-b">Ruhepuls 85 S/min</text>
+            <text x="440" y="226" class="t-xs t-water t-b">Ruhepuls 64 S/min</text>
+            <circle cx="330" cy="90" r="4" class="f-acc"/>
+            <circle cx="330" cy="170" r="4" style="fill:var(--water-ink)"/>
+            <text x="336" y="84" class="t-xs t-b">nach 90 s: ca. 140</text>
+            <text x="336" y="164" class="t-xs t-b">nach 90 s: ca. 100</text>
+          </svg>
+          <figcaption>Schematisch nach Abb. 14 (S. 29): Erholungspuls in Abhängigkeit vom Ruhepuls. Rot = Ruhepuls 85, blau = Ruhepuls 64.</figcaption>
+        </figure>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=DX4yDGv7B5g" target="_blank" rel="noopener">So geht dein Puls runter – Zone-2-Training</a> <small>einenschrittweiter · 5:42</small></li>
+            <li><a href="https://www.youtube.com/watch?v=dtKQ6FGyu3w" target="_blank" rel="noopener">Arzt erklärt: Trainingszonen für Ausdauersportler</a> <small>Doc Golo · 10:11</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Bis zu welcher Intensität reicht die Grundlagenausdauer laut Definition?</p>
+            <ol><li>Bis zur aeroben Schwelle</li><li>Bis zur anaeroben Schwelle</li><li>Bis zur maximalen Herzfrequenz</li></ol>
+            <p class="why">GA: bis zur aeroben Schwelle, fast ausschließlich aerob, große Muskelgruppen (&gt; 1/7).</p></div>
+          <div class="q" data-a="2"><p>Wo liegt die HF nach 90 s Pause bei der Gruppe mit Ruhepuls 85 (Abb. 14)?</p>
+            <ol><li>bei ca. 85 S/min</li><li>bei ca. 100 S/min</li><li>bei ca. 140 S/min</li></ol>
+            <p class="why">Ruhepuls 64 → ca. 100, Ruhepuls 85 → ca. 140. Niedriger Ruhepuls = schnellere Erholung.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="anaerobe-ausdauer" data-show="2">
+        <header class="topic-head"><h3>Anaerobe Ausdauer &amp; spezielle Ausdauerfähigkeiten</h3></header>
+        <div class="level" data-level="1">
+          <p>Bei der <strong>anaeroben Ausdauer</strong> belastest du dich <strong>über</strong> der anaeroben Schwelle – du kommst „in Sauerstoffschuld“. Für die Gesundheit bringt das nichts, im Wettkampf aber schon.</p>
+          <p>Im Sport teilt man die Ausdauer deshalb nach der <strong>Dauer</strong> ein: <strong>Kurzzeit</strong> (bis 2 min, z. B. 400 m), <strong>Mittelzeit</strong> (2–10 min, z. B. 1500 m), <strong>Langzeit</strong> (über 10 min, z. B. 10.000 m) und <strong>Spielausdauer</strong> (Fußball, Basketball …).</p>
+        </div>
+        <div class="level" data-level="2">
+          <div class="box heft"><span class="box-label">Aus dem Buch · S. 30 – allgemeine anaerobe Ausdauer</span>Die Belastungsintensität liegt <b>über der anaeroben Schwelle</b>. Die Energiegewinnung ist <b>vorwiegend anaerob-alaktazid und anaerob-laktazid</b>. Es entsteht ein <b>erhebliches Sauerstoffdefizit</b>.</div>
+          <ul>
+            <li>Für <b>Gesundheit und Fitness keine Bedeutung</b>; für spezielle sportliche Ausdauerleistungen zu unspezifisch.</li>
+            <li>Bei dynamischen Bewegungen über <b>25 s</b> spielt die Energiebereitstellung eine dominierende Rolle → <b>spezielle Ausdauerfähigkeiten</b> umfassen alle Belastungen über 25 s.</li>
+            <li><b>Sauerstoffdefizit / Sauerstoffschuld:</b> O₂-Menge, die während der Belastung für eine rein aerobe Energiegewinnung fehlt; sie muss in der Erholungsphase aufgenommen werden.</li>
+          </ul>
+          <div class="tbl"><table>
+            <thead><tr><th>Spezielle Ausdauerfähigkeit (Tab. 8)</th><th>Belastungsdauer</th><th>Energiebereitstellung</th></tr></thead>
+            <tbody>
+              <tr><th>Kurzzeitausdauer</th><td>25 s – 2 min</td><td>hpts. anaerob-laktazid</td></tr>
+              <tr><th>Mittelzeitausdauer</th><td>2 – 10 min</td><td>anaerob-laktazid und aerob</td></tr>
+              <tr><th>Langzeitausdauer</th><td>über 10 min</td><td>hpts. aerob</td></tr>
+              <tr><th>azyklische Spielausdauer</th><td>über 10 min</td><td>alle Arten der Energiebereitstellung</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Langzeitausdauer genauer:</strong> Beim 10.000-m-Lauf (30 min) werden bis zu 10 mmol/l Laktat gemessen – anaerob spielt also noch eine wichtige Rolle. Über 40 min überlappen sich Langzeitausdauer und allgemeine aerobe Ausdauer.</li>
+            <li><strong>Spielausdauer:</strong> In allen Sportspielen über 10 min leistungsbestimmend. Hohe Intensität: Kraft- und Schnelligkeitsfähigkeiten dominieren; ruhige Phasen: <b>Grundlagenausdauer</b> für schnelle Erholung.</li>
+            <li><strong>Zuordnen üben:</strong> 400 m (ca. 50 s–1 min) = Kurzzeit · 800/1500 m = Mittelzeit · 5.000 m, Marathon = Langzeit · Handball = Spielausdauer.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Bei Disziplin-Aufgaben erst die <b>Belastungsdauer</b> bestimmen, dann aus Tab. 8 die Energiebereitstellung ableiten und mit den Wegen A–D begründen.</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=bVqNI_UF-6Q" target="_blank" rel="noopener">Ausdauerfähigkeiten – Erkennungsmerkmale für Abiaufgaben</a> <small>DocBeggesSeggl · 9:02</small></li>
+            <li><a href="https://www.youtube.com/watch?v=EXIF4J6tXVI" target="_blank" rel="noopener">Ausdauerarten</a> <small>Sporttheorie Leistungskurs · 7:45</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Welche Energiebereitstellung dominiert bei der Mittelzeitausdauer (2–10 min)?</p>
+            <ol><li>hpts. anaerob-alaktazid</li><li>anaerob-laktazid und aerob</li><li>nur Fettabbau</li></ol>
+            <p class="why">Tab. 8: Kurzzeit hpts. anaerob-laktazid · Mittelzeit anaerob-laktazid und aerob · Langzeit hpts. aerob.</p></div>
+          <div class="q" data-a="0"><p>Was ist das „Sauerstoffdefizit“?</p>
+            <ol><li>Die O₂-Menge, die während der Belastung für eine rein aerobe Energiegewinnung fehlt und danach aufgenommen werden muss</li><li>Ein zu niedriger Sauerstoffgehalt der Luft</li><li>Ein Zeichen für zu geringe Belastung</li></ol>
+            <p class="why">Entsteht über der ANS (anaerobe Ausdauer) und muss in der Erholungsphase „zurückgezahlt“ werden (Sauerstoffschuld).</p></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= KAPITEL V ================= -->
+    <section class="chapter" id="kap-5" style="--cc:var(--c5)" data-short="Ausdauertraining" data-msg="Methoden, Formeln, Programme – du kannst jetzt ein Training planen.">
+      <header class="chapter-head">
+        <div class="chapter-no">V</div>
+        <div><div class="overline">Kapitel V · Buch S. 30–38</div><h2>Ausdauertraining</h2><p class="chapter-desc">Ziele und Voraussetzungen, Dauer- und Intervallmethoden, HIIT, Steuerung über Herzfrequenz (Formeln!), Atmung und Belastungsgefühl, Trainingsprogramme und Sportarten.</p></div>
+        <div class="chapter-count"></div>
+      </header>
+
+      <article class="topic" id="ziele" data-show="2">
+        <header class="topic-head"><h3>Ziele, Voraussetzungen &amp; Belastungskomponenten <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Bevor du trainierst, fragst du: <strong>Wozu?</strong> (z. B. fitter werden, gesund bleiben, abnehmen, Stress abbauen) und <strong>Wer bin ich?</strong> (Trainingszustand, Gewicht, Verletzungen, Muskeltyp).</p>
+          <p>Dann stellst du fünf Stellschrauben ein: <strong>Wie intensiv? Wie lange? Wie dicht (Pausen)? Wie viel insgesamt? Wie oft?</strong></p>
+          <p class="analogy">Wie ein Rezept: Zutaten (Ziele), wer mitisst (Voraussetzungen) und Kochanleitung (Intensität, Dauer, Pausen …).</p>
+        </div>
+        <div class="level" data-level="2">
+          <p>Die positiven Wirkungen werden am besten durch Training der <b>allgemeinen aeroben Ausdauer</b> oder der <b>Grundlagenausdauer</b> erreicht. Zu beachten sind die allgemeinen Gesetzmäßigkeiten und <b>Ziele und Voraussetzungen</b> des Trainierenden.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Ziele (Beispiele)</th><th>Voraussetzungen</th></tr></thead>
+            <tbody><tr>
+              <td><ul><li>Erhaltung und Verbesserung der Leistungsfähigkeit/Fitness</li><li>Erhaltung und Stabilisierung der Gesundheit (Prävention)</li><li>Reduktion des Körpergewichts und Körperformung („Fettverbrennung“)</li><li>Wohlbefinden und Stressabbau</li></ul></td>
+              <td><ul><li>Trainingszustand</li><li>Körpergewicht</li><li>Verletzungen</li><li>Muskelstruktur (Anteil langsam und schnell zuckender Fasern)</li></ul></td>
+            </tr></tbody>
+          </table></div>
+          <ul>
+            <li>Leistungsfähigkeit und Fitness verbessern → bevorzugt <b>allgemeine aerobe Ausdauer</b>; sonst steht die <b>Grundlagenausdauer</b> im Vordergrund.</li>
+            <li><b>Trainingsanfänger:</b> zunächst Belastung <b>reduzieren</b> – zu schnelle Ermüdung oder Erschöpfung demotiviert.</li>
+            <li>Hohes Körpergewicht/Verletzungen: Fehlbelastungen des Muskel-, Band- und Stützapparates beim Laufen → besser <b>Rad oder Wasser</b>.</li>
+            <li>Viele <b>langsame Muskelfasern</b> → Sportarten mit langsameren Bewegungsabläufen (Radfahren, Schwimmen, Skilanglauf, Inline-Skating).</li>
+          </ul>
+          <div class="box merke"><span class="box-label">Belastungskomponenten</span>Für ein wirksames Training müssen <b>Intensität, Dauer, Dichte, Umfang</b> und <b>Häufigkeit</b> der Trainingseinheiten aufeinander abgestimmt sein. Zwei Grundformen: <b>Dauermethoden</b> (keine Pause, Intensität max. bis zur ANS) und <b>Intervallmethoden</b> (mehrere Pausen mit unvollständiger Erholung, Intensität über der ANS).</div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Begriffe sauber trennen:</strong> Intensität = wie stark (z. B. Puls, Tempo) · Dauer = wie lange ein Reiz · Dichte = Verhältnis Belastung/Pause · Umfang = Gesamtmenge (z. B. km pro Einheit) · Häufigkeit = Einheiten pro Woche.</li>
+            <li><strong>Muskelfasern:</strong> Langsam zuckende Fasern arbeiten vor allem aerob und ermüden langsam; schnell zuckende sind kräftig, aber ermüden schnell (→ Kapitel Kraft).</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Bei „Planen Sie ein Training für Person X“ zuerst Ziel und Voraussetzungen nennen, dann Methode wählen und <b>alle Belastungskomponenten</b> mit Zahlen angeben (z. B. „3 × pro Woche, 30 min, Puls 180 − Lebensalter“).</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=VfjMjwgBi6M" target="_blank" rel="noopener">Belastungsnormative</a> <small>Sporttheorie Leistungskurs · 3:07</small></li>
+            <li><a href="https://www.youtube.com/watch?v=uuVuLF96G-c" target="_blank" rel="noopener">Die Belastungsnormative des sportlichen Trainings – einfach erklärt</a> <small>Sport – Animiert Kapiert · 5:33</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="2"><p>Wie unterscheiden sich Dauer- und Intervallmethoden grundsätzlich?</p>
+            <ol><li>Dauermethoden über der ANS mit Pausen, Intervallmethoden unter der ANS ohne Pausen</li><li>Beide gleich, nur andere Sportarten</li><li>Dauermethoden ohne Pause bis max. zur ANS; Intervallmethoden mit Pausen (unvollständige Erholung) über der ANS</li></ol>
+            <p class="why">Dauer: Belastung nicht unterbrochen, Intensität max. bis ANS. Intervall: mehrere Pausen mit unvollständiger Erholung, Intensität über der ANS.</p></div>
+          <div class="q" data-a="0"><p>Was wird einer Person mit hohem Körpergewicht empfohlen?</p>
+            <ol><li>Training mit dem Rad oder im Wasser statt Laufen</li><li>Sofort hochintensive Intervalle</li><li>Nur Krafttraining</li></ol>
+            <p class="why">Beim Laufen drohen Fehlbelastungen des Muskel-, Band- und Stützapparates – Rad und Wasser sind gelenkschonend.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="dauermethoden" data-show="2">
+        <header class="topic-head"><h3>Dauermethoden: kontinuierlich &amp; Fahrtspiel <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Bei der <strong>Dauermethode</strong> läufst (radelst, schwimmst) du <strong>ohne Pause</strong>.</p>
+          <ul>
+            <li><strong>Extensiv</strong> = locker und sehr lang (ca. 100 min) → für die <strong>Gesundheit</strong>, verbessert die Fettverbrennung.</li>
+            <li><strong>Intensiv</strong> = zügig, kürzer (ca. 45 min) → für die <strong>Fitness</strong>, verbessert den Zucker-Stoffwechsel.</li>
+            <li><strong>Fahrtspiel</strong> = Tempo spielerisch wechseln (Sprint, Hügel, locker traben) – aber nie stehen bleiben.</li>
+          </ul>
+          <p class="analogy">Fahrtspiel ist wie Radfahren durch die Stadt ohne Ampeln: mal Gas, mal rollen lassen – aber du hältst nie an.</p>
+        </div>
+        <div class="level" data-level="2">
+          <h4>a) Kontinuierliche Methoden</h4>
+          <p>Die Intensität bleibt während der gesamten Belastungszeit <b>konstant</b> und darf <b>nicht über der anaeroben Schwelle</b> liegen (sonst wäre die für einen trainingswirksamen Reiz nötige Dauer wegen zu früher Ermüdung nicht erreichbar). Die Wirkung hängt von der Intensität ab.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Tab. 9</th><th>extensiv</th><th>intensiv</th></tr></thead>
+            <tbody>
+              <tr><th>Intensität</th><td>aerobe Schwelle</td><td>aerob-anaerober Übergangsbereich</td></tr>
+              <tr><th>Dauer</th><td>ca. 100 min</td><td>ca. 45 min</td></tr>
+              <tr><th>wesentliche Wirkung</th><td colspan="2">Verbesserung der Herz-Kreislauf-Funktion · Verbesserung der aeroben Energiegewinnung …</td></tr>
+              <tr><th></th><td>… aus <b>Fetten</b></td><td>… aus <b>Kohlenhydraten</b> (Kapillarisierung)</td></tr>
+              <tr><th>wesentliches Ziel</th><td><b>Gesundheit</b></td><td><b>Fitness</b></td></tr>
+            </tbody>
+          </table></div>
+          <h4>b) Fahrtspiel</h4>
+          <ul>
+            <li>Belastungsintensität wird <b>spielerisch variiert</b> – von ganz niedrig (Erholung) bis fast maximal.</li>
+            <li>Auf eine hohe Belastung (über der ANS) <b>muss eine Erholungsphase</b> mit geringer Belastung folgen (aerobe Schwelle oder geringer) – aber <b>keine Belastungspause</b>.</li>
+            <li>Geeignet für <b>abwechslungsreiches Gelände</b>; sehr motivierend, erfordert aber ein gutes <b>Belastungsgefühl</b> (sonst zu starke Übersäuerung).</li>
+            <li>Wirkung: Verbesserung der <b>allgemeinen aeroben Ausdauer</b>. <b>Für Anfänger nicht geeignet.</b></li>
+          </ul>
+          <p>Beispiel (Abb. 16): Einlaufen, 5–10 min langsamer Lauf, schnelles Gehen 5 min, mittleres Lauftempo 1200–1400 m, langsamer Lauf, 3 × Sprint 50–60 m, Gehpause, 3–4 schnelle Laufschritte, Lauf hügelaufwärts 150–180 m, Auslaufen.</p>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Warum nicht über der ANS?</strong> Dort steigt das Laktat stetig → Abbruch nach kurzer Zeit → die lange Dauer, die den Trainingsreiz ausmacht, wird nicht erreicht.</li>
+            <li><strong>Verknüpfung:</strong> extensiv = Fettanteil hoch (aerobe Schwelle ≈ 50 % Fett) → <a href="#aerob-fett">Weg D</a>; intensiv = mehr Kohlenhydrate → <a href="#aerob-kh">Weg C</a>.</li>
+            <li><strong>Fahrtspiel vs. Intervall:</strong> Beide wechseln die Intensität, beim Fahrtspiel gibt es aber <b>keine Pause</b> und die Wechsel sind <b>nicht festgelegt</b>, sondern spielerisch.</li>
+          </ul>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>Fahrtspiel als Intervallmethode einordnen – laut Buch gehört es zu den <b>Dauermethoden</b> (keine Belastungspause).</div>
+        </div>
+        <figure class="fig">
+          <svg viewBox="0 0 760 240" role="img" aria-label="Intensitätsverlauf bei Dauermethode, Fahrtspiel und Intervallmethode">
+            <g class="s-mute" stroke-dasharray="4 4" stroke-width="1">
+              <line x1="20" y1="95" x2="640" y2="95"/><line x1="20" y1="140" x2="640" y2="140"/>
+            </g>
+            <text x="648" y="99" class="t-xs t-mute">anaerobe Schwelle</text>
+            <text x="648" y="144" class="t-xs t-mute">aerobe Schwelle</text>
+            <g class="s-ink" stroke-width="1.5">
+              <line x1="20" y1="200" x2="210" y2="200"/><line x1="240" y1="200" x2="430" y2="200"/><line x1="460" y1="200" x2="640" y2="200"/>
+              <line x1="20" y1="200" x2="20" y2="50"/><line x1="240" y1="200" x2="240" y2="50"/><line x1="460" y1="200" x2="460" y2="50"/>
+            </g>
+            <text x="115" y="28" text-anchor="middle" class="t-h">Dauermethode</text>
+            <line x1="24" y1="142" x2="206" y2="142" class="s-water" stroke-width="3"/>
+            <line x1="24" y1="117" x2="206" y2="117" class="s-acc" stroke-width="3"/>
+            <text x="30" y="160" class="t-xs t-water t-b">extensiv · ca. 100 min</text>
+            <text x="30" y="112" class="t-xs t-acc t-b">intensiv · ca. 45 min</text>
+            <text x="335" y="28" text-anchor="middle" class="t-h">Fahrtspiel</text>
+            <polyline points="242,150 262,150 270,112 288,112 296,150 316,150 322,72 336,72 342,146 362,146 370,122 390,122 396,68 408,68 414,150 430,150" fill="none" class="s-acc" stroke-width="2.6"/>
+            <text x="335" y="222" text-anchor="middle" class="t-xs">Tempo wechselt spielerisch, keine Pause</text>
+            <text x="550" y="28" text-anchor="middle" class="t-h">Intervallmethode</text>
+            <polyline points="462,165 470,165 470,80 492,80 492,165 508,165 508,80 530,80 530,165 546,165 546,80 568,80 568,165 584,165 584,80 606,80 606,165 638,165" fill="none" class="s-acc" stroke-width="2.6"/>
+            <text x="550" y="222" text-anchor="middle" class="t-xs">über der ANS · Pausen mit</text>
+            <text x="550" y="235" text-anchor="middle" class="t-xs">unvollständiger Erholung</text>
+            <text x="115" y="222" text-anchor="middle" class="t-xs">konstant, max. bis zur ANS</text>
+            <text x="14" y="60" text-anchor="end" class="t-xs t-mute" transform="rotate(-90 14 60)">Intensität</text>
+          </svg>
+          <figcaption>Intensitätsverlauf der Trainingsmethoden (schematisch, x-Achse = Zeit).</figcaption>
+        </figure>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=Mx_niiKTaBs" target="_blank" rel="noopener">Extensive Dauermethode</a> <small>Sporttheorie Leistungskurs · 3:15</small></li>
+            <li><a href="https://www.youtube.com/watch?v=DkkN2iwQCRQ" target="_blank" rel="noopener">Intensive Dauermethode – einfach erklärt</a> <small>Sporttheorie Leistungskurs · 3:51</small></li>
+            <li><a href="https://www.youtube.com/watch?v=4h6wmb95KiU" target="_blank" rel="noopener">Fahrtspiel (Fartlek)</a> <small>Sporttheorie Leistungskurs · 2:17</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Welche Angaben gehören zur <em>extensiven</em> kontinuierlichen Dauermethode?</p>
+            <ol><li>Übergangsbereich, ca. 45 min, Ziel Fitness</li><li>aerobe Schwelle, ca. 100 min, Ziel Gesundheit</li><li>über der ANS, 1–8 min, Ziel Wettkampf</li></ol>
+            <p class="why">Extensiv: aerobe Schwelle, ca. 100 min, aerobe Energiegewinnung aus Fetten, Gesundheit. Intensiv: Übergangsbereich, ca. 45 min, KH/Kapillarisierung, Fitness.</p></div>
+          <div class="q" data-a="2"><p>Was ist beim Fahrtspiel wichtig?</p>
+            <ol><li>Nach jedem Sprint eine Pause im Stehen</li><li>Konstantes Tempo an der aeroben Schwelle</li><li>Auf hohe Belastung muss eine Erholungsphase mit geringer Belastung folgen – ohne Belastungspause</li></ol>
+            <p class="why">Spielerischer Tempowechsel, keine Pause, gutes Belastungsgefühl nötig, für Anfänger nicht geeignet.</p></div>
+          <div class="q" data-a="0"><p>Warum darf die Intensität bei kontinuierlichen Methoden nicht über der ANS liegen?</p>
+            <ol><li>Weil man sonst zu früh ermüdet und die nötige Belastungsdauer nicht erreicht</li><li>Weil man sonst zu wenig Laktat bildet</li><li>Weil sonst die Fettverbrennung zu hoch ist</li></ol>
+            <p class="why">Über der ANS steigt das Laktat stetig → Abbruch → kein trainingswirksamer Reiz durch lange Dauer.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="intervallmethoden" data-show="2">
+        <header class="topic-head"><h3>Intervallmethoden, Circuittraining &amp; HIIT <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Bei der <strong>Intervallmethode</strong> wechseln sich <strong>harte Abschnitte</strong> (über der anaeroben Schwelle) und <strong>kurze Pausen</strong> ab. Die Pause ist absichtlich <strong>zu kurz</strong> für eine volle Erholung („lohnende Pause“) – du startest den nächsten Lauf, wenn der Puls auf etwa 120–140 gefallen ist.</p>
+          <p><strong>Circuittraining</strong> (Stationen für Arme, Beine, Rücken, Bauch) und <strong>HIIT</strong> (fast maximal, kurze Pausen) sind besondere Formen.</p>
+          <p class="analogy">Wie Treppensteigen mit Verschnaufpausen auf jedem Absatz – du ruhst dich kurz aus, aber nie ganz, bevor die nächste Treppe kommt.</p>
+        </div>
+        <div class="level" data-level="2">
+          <ul>
+            <li>Belastung <b>nicht kontinuierlich, sondern intervallartig</b>; Intensität grundsätzlich <b>über der anaeroben Schwelle</b>.</li>
+            <li><b>Extensive Intervallmethode</b> (zur Verbesserung der aeroben Ausdauer): Intensität im <b>unteren Bereich</b> der Intervallmethoden (extensiv 60–80 %, intensiv 80–90 %); <b>unvollständige Erholung</b>; Orientierung: nächster Reiz bei einer HF von etwa <b>120–140 S/min</b>.</li>
+            <li>Da auch die Erholungspausen trainingswirksam sind, hat die Kombination bei entsprechender Gesamtdauer eine <b>ähnliche Wirkung wie die intensive Dauermethode</b>. Anpassungen der Muskelzelle (<b>Mitochondrien</b>) und <b>Kapillarisierung</b> lassen sich aber <b>gezielter und effektiver</b> trainieren.</li>
+            <li>Höhere Intensität + längere Pausen + geringerer Umfang → Ausdauer (aerob und anaerob) und Kraftausdauer gleichzeitig.</li>
+            <li><b>Circuittraining:</b> abwechselnde Beanspruchung einzelner Muskelgruppen → hohe Gesamtbelastung, aber für jede Muskelgruppe relativ lange Pause.</li>
+          </ul>
+          <div class="tbl"><table>
+            <thead><tr><th>Tab. 10</th><th>Lauftraining (extensive Intervallm.)</th><th>Circuittraining</th><th>HIIT</th></tr></thead>
+            <tbody>
+              <tr><th>Intensität</th><td>kurze Strecke deutlich, lange Strecke wenig über der ANS</td><td>Beinmuskulatur deutlich über der ANS</td><td><b>weit über der ANS</b>, 90–95 % HFmax</td></tr>
+              <tr><th>Dauer</th><td>ca. 1–8 min (300–2000 m)</td><td>ca. 30–45 s je Station</td><td>15 s – 8 min</td></tr>
+              <tr><th>Pause</th><td>ca. 1,5–4 min</td><td>ca. 20–40 s</td><td>Belastung : Pause = 1 : 1 bis 2 : 1</td></tr>
+              <tr><th>Umfang</th><td>20–4 Wiederholungen</td><td>6–8 Stationen, 2–3 Rundgänge</td><td>47–4 Wiederholungen</td></tr>
+              <tr><th>Wirkung</th><td>HKS; Energiegewinnung aus KH: aerober Stoffwechsel, Kapillarisierung</td><td>HKS; KH aerob und anaerob</td><td>aerob und anaerob</td></tr>
+            </tbody>
+          </table></div>
+          <h4>HIIT (Hochintensives Intervalltraining)</h4>
+          <ul>
+            <li>Intensität <b>fast maximal</b>, Pausen relativ kurz → hohe Laktatbildung, schnelle Erschöpfung.</li>
+            <li>Auch anaerobe Belastungen lösen Anpassungen im <b>aeroben</b> Bereich aus – vergleichbar oder sogar besser, bei <b>großer Zeitersparnis</b>.</li>
+            <li>Lange Erholung nötig: <b>max. 1–2 × pro Woche</b>, auf gute <b>Grundlagenausdauer</b> achten. Vorsicht wegen Verletzungsrisiken, Übertraining und unbekannter Langzeitwirkung; bei Kindern/Jugendlichen viele Stresshormone.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>„Lohnende Pause“:</strong> Fachlich üblicher Begriff für die unvollständige Erholung – das Herz-Kreislauf-System arbeitet in der Pause weiter auf hohem Niveau (Schlagvolumen ist in der Erholung besonders groß).</li>
+            <li><strong>Schulsport:</strong> Intensive Intervalle sind effektiv, zeitsparend und motivierender als lange Läufe; Kinder verarbeiten Laktat teils sogar besser als Erwachsene.</li>
+            <li><strong>Dosierung im Buch (S. 37):</strong> Intervalltraining nur als <b>Ergänzung</b> zur Dauermethode, max. <b>10–15 %</b> des Wochenumfangs. Cooper-Vorbereitung: 1 × pro Woche 400-m-Intervalle, 10–20 % schneller als das Cooper-Tempo, mind. 6–8 Wiederholungen, Pause &gt; 50 % der Belastungszeit, in der Pause traben.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Methode begründet wählen: Gesundheit/Fettstoffwechsel → extensive Dauermethode; Fitness → intensive Dauer- oder extensive Intervallmethode; wenig Zeit → HIIT (mit Einschränkungen).</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=336YuYfjkxE" target="_blank" rel="noopener">Alle 6 Ausdauertrainingsmethoden – einfach erklärt</a> <small>Sporttheorie Leistungskurs · 8:13</small></li>
+            <li><a href="https://www.youtube.com/watch?v=hDjTegXWYKE" target="_blank" rel="noopener">Intensive Intervallmethode</a> <small>Sporttheorie Leistungskurs · 3:26</small></li>
+            <li><a href="https://www.youtube.com/watch?v=SudTlrdzTPg" target="_blank" rel="noopener">HIIT – Hochintensives Intervalltraining</a> <small>Sporttheorie Leistungskurs · 5:48</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Wann wird bei der extensiven Intervallmethode der nächste Belastungsreiz gesetzt?</p>
+            <ol><li>Wenn die Herzfrequenz auf etwa 120–140 S/min gefallen ist</li><li>Wenn der Ruhepuls wieder erreicht ist</li><li>Sofort ohne Pause</li></ol>
+            <p class="why">Unvollständige Erholung – Orientierung an HF 120–140 S/min.</p></div>
+          <div class="q" data-a="1"><p>Was kann die extensive Intervallmethode gezielter trainieren als die intensive Dauermethode?</p>
+            <ol><li>Die Beweglichkeit</li><li>Mitochondrien (Muskelzelle) und Kapillarisierung</li><li>Die maximale Herzfrequenz</li></ol>
+            <p class="why">Ähnliche Gesamtwirkung wie intensive Dauermethode, aber Mitochondrien und Kapillarisierung werden gezielter und effektiver trainiert.</p></div>
+          <div class="q" data-a="2"><p>Wie oft sollte HIIT laut Buch höchstens durchgeführt werden?</p>
+            <ol><li>täglich</li><li>3–4 × pro Woche</li><li>1–2 × pro Woche</li></ol>
+            <p class="why">Hohe Belastungen → lange Erholung: max. 1–2 × pro Woche und auf gute Grundlagenausdauer achten.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="herzfrequenz" data-show="2">
+        <header class="topic-head"><h3>Steuerung über die Herzfrequenz: die Pulsformeln <span class="ka">KA!</span></h3></header>
+        <div class="level" data-level="1">
+          <p>Woran merkst du, ob du im richtigen Bereich trainierst? Am einfachsten am <strong>Puls</strong>. Dafür gibt es Faustformeln mit deinem <strong>Lebensalter (LA)</strong>:</p>
+          <ul>
+            <li><strong>Maximalpuls</strong> = 220 − Alter</li>
+            <li><strong>locker, gesund</strong> (aerob) = 180 − Alter</li>
+            <li><strong>Fitness</strong> (zwischen den Schwellen) = 170 − ½ Alter ± 10</li>
+          </ul>
+          <p>Für dich mit 17: Maximalpuls etwa 203, lockerer Trainingspuls 163.</p>
+          <p class="analogy">Der Puls ist wie der Drehzahlmesser im Auto: Er zeigt, wie sehr dein Motor gerade arbeitet.</p>
+        </div>
+        <div class="level" data-level="2">
+          <ul>
+            <li>Mit Laufbandtest-Daten kann man die Intensität genau über <b>Laufgeschwindigkeit</b> oder <b>Herzfrequenz</b> steuern. Die HF lässt sich in den unterschiedlichsten Situationen messen (Pulsmesser: Brustgurt + Pulsuhr).</li>
+            <li>Ohne Pulsmesser: an Handgelenk oder <b>Halsschlagader</b> – nur am Ende der Belastung, innerhalb der <b>ersten 10 Sekunden</b> (HF sinkt schnell); Abweichungen bis <b>10 S/min</b> möglich.</li>
+            <li>Die <b>maximale Herzfrequenz nimmt ab dem 20. Lebensjahr ab</b>.</li>
+          </ul>
+          <div class="box heft"><span class="box-label">Formeln aus dem Buch · S. 34–35</span>
+            <p><b>Maximale Herzfrequenz (S/min) = 220 − Lebensalter</b></p>
+            <p><b>Trainingspuls (S/min) = 180 − Lebensalter</b> <small>(Hollmann, für Belastungen im aeroben Bereich – in der Regel keine erhöhte Laktatbildung)</small></p>
+            <p><b>Trainingspuls (S/min) = 170 − ½ Lebensalter ± 10</b> <small>(Intensitätsbereich zwischen aerober und anaerober Schwelle, bis 60 Jahre; +/- 10 je nach Trainingszustand: Trainierte höher)</small></p>
+            <p><b>Trainingspuls (S/min) = Ruhepuls + (HFmax − Ruhepuls) × % Intensität</b> <small>(Karvonen; Anfänger ca. 60 %, Fortgeschrittene ca. 75 %)</small></p>
+          </div>
+          <div class="pulsrechner" id="pulsrechner">
+            <span class="box-label">Pulsrechner – probier es mit deinen Werten</span>
+            <div class="inputs">
+              <label>Lebensalter<input type="number" id="prAlter" value="17" min="8" max="90" inputmode="numeric"></label>
+              <label>Ruhepuls (S/min)<input type="number" id="prRuhe" value="70" min="30" max="120" inputmode="numeric"></label>
+            </div>
+            <div class="out" aria-live="polite">
+              <div><b id="prMax">203</b>HFmax = 220 − LA</div>
+              <div><b id="prAerob">163</b>180 − LA (aerob)</div>
+              <div><b id="prFit">152–172</b>170 − ½ LA ± 10</div>
+              <div><b id="prK60">150</b>Karvonen 60 % (Anfänger)</div>
+              <div><b id="prK75">170</b>Karvonen 75 % (Fortgeschr.)</div>
+            </div>
+            <p class="note">Faustformeln für das Laufen; bei anderen Sportarten wird der Puls reduziert (→ <a href="#trainingsprogramme">Tab. 13</a>). Gerundet auf ganze Schläge.</p>
+          </div>
+          <div class="box merke"><span class="box-label">Rechenbeispiel (17 Jahre, Ruhepuls 70)</span>HFmax = 220 − 17 = <b>203</b> · Hollmann aerob = 180 − 17 = <b>163</b> · 170 − 8,5 = 161,5 ± 10 → <b>ca. 152–172</b> · Karvonen 60 %: 70 + (203 − 70) × 0,6 = 70 + 79,8 ≈ <b>150</b> · 75 %: 70 + 99,75 ≈ <b>170</b></div>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Vorteil Karvonen:</strong> berücksichtigt außer dem Alter auch den <b>Trainingszustand</b> (über den Ruhepuls) und die gewünschte <b>Intensität</b>. Problem: Die genaue HFmax kennt man nur aus einem Stufentest bis zur Ausbelastung – nur bei gutem Gesundheitszustand.</li>
+            <li><strong>Buchwerte Tab. 11 (fixe Schwellen 2/4 mmol):</strong> Tennisspielerin Ruhe 80, HFmax 210, aerob 152, anaerob 188 · Läuferin Ruhe 60, HFmax 210, aerob 168, anaerob 191 (S/min).</li>
+            <li><strong>Einflüsse auf die HF:</strong> Hitze, hohe Luftfeuchtigkeit, Höhenlage, Infekte <b>erhöhen</b>; Medikamente (β-Blocker), Tauchreflex beim Schwimmen, Herzerkrankungen <b>senken</b> die HF. Bei Überanstrengungsgefühl nicht „mit Gewalt“ an der vorgegebenen HF festhalten.</li>
+            <li>„Aha, deshalb Trimming 130 für Ältere“ – 180 − 50 = 130.</li>
+          </ul>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>Bei 170 − ½ LA das „½“ vergessen oder das ± 10 weglassen. Und Karvonen: erst (HFmax − Ruhepuls) × %, <b>dann</b> den Ruhepuls addieren (Punkt vor Strich).</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=yZwhczbiwfE" target="_blank" rel="noopener">Maximale Herzfrequenz berechnen: Formeln, Feldtest und Trainingsbereiche</a> <small>Akademie für Sport und Gesundheit · 1:12</small></li>
+            <li><a href="https://www.youtube.com/watch?v=A8r6jLoPe-w" target="_blank" rel="noopener">Den optimalen Cardio-Trainingspuls berechnen</a> <small>figurtrainer · 5:01</small></li>
+            <li><a href="https://www.youtube.com/watch?v=nUeMYRGvnlI" target="_blank" rel="noopener">Herzfrequenzzonen berechnen: 3 Methoden</a> <small>ausdauerclub · 4:42</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="2"><p>Wie lautet die Formel für die maximale Herzfrequenz?</p>
+            <ol><li>180 − Lebensalter</li><li>170 − ½ Lebensalter</li><li>220 − Lebensalter</li></ol>
+            <p class="why">HFmax = 220 − LA. 180 − LA ist der aerobe Trainingspuls nach Hollmann.</p></div>
+          <div class="q" data-a="1"><p>Trainingspuls nach Karvonen für 16 Jahre, Ruhepuls 64, Intensität 75 %?</p>
+            <ol><li>ca. 153 S/min</li><li>ca. 169 S/min</li><li>ca. 204 S/min</li></ol>
+            <p class="why">HFmax = 204; 64 + (204 − 64) × 0,75 = 64 + 105 = 169.</p></div>
+          <div class="q" data-a="0"><p>Warum muss der Puls nach Belastungsende innerhalb von 10 Sekunden gemessen werden?</p>
+            <ol><li>Weil die Herzfrequenz nach Belastungsende sehr schnell absinkt</li><li>Weil der Puls danach nicht mehr tastbar ist</li><li>Weil das Laktat dann abgebaut ist</li></ol>
+            <p class="why">Die HF fällt schnell – nur in den ersten ~10 s ist der Belastungspuls hinreichend genau (am besten Halsschlagader).</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="atmung-gefuehl" data-show="2">
+        <header class="topic-head"><h3>Steuerung über Atmung &amp; Belastungsgefühl</h3></header>
+        <div class="level" data-level="1">
+          <p>Auch ohne Pulsuhr merkst du, ob du zu schnell bist:</p>
+          <ul>
+            <li><strong>Atem-Schritt-Rhythmus:</strong> 4 Schritte ein, 4 Schritte aus → du bist im aeroben Bereich.</li>
+            <li><strong>„Laufen ohne zu Schnaufen“</strong> und <strong>„Schweigen ist Silber, Reden ist Gold“</strong> – du solltest dich noch in ganzen Sätzen unterhalten können.</li>
+            <li>Dein <strong>Gefühl</strong>: „leicht bis mittel“ ist ideal für Gesundheit und Fitness.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="2">
+          <div class="box heft"><span class="box-label">Aus dem Buch · S. 36</span>Beim Laufen lässt sich das leicht durch den <b>Atem-Schritt-Rhythmus</b> kontrollieren. Kann ein <b>4-Schritt-Atemrhythmus</b> (4 Schritte einatmen, 4 Schritte ausatmen) eingehalten werden, dann liegt die Belastung im <b>aeroben Bereich</b>. Selbst bei einem <b>2-Schritt-Rhythmus</b> liegt die Intensität bei entsprechender Atemtiefe <b>nicht über der anaeroben Schwelle</b>.</div>
+          <ul>
+            <li>Können Atemfrequenz und Atemtiefe über längere Zeit ohne spürbare Ermüdung konstant gehalten werden, ist die O₂-Versorgung ausreichend.</li>
+            <li><b>Ruhige, tiefe Atmung</b> → aerober Bereich; <b>hechelnde, flache Atmung</b> → verstärkt anaerob.</li>
+            <li>Vorteil: Steuerung <b>während</b> der Belastung möglich. Rhythmus muss verkürzt werden → Tempo sofort verringern; leicht einzuhalten → Tempo erhöhen.</li>
+            <li><b>Nasenatmung</b> (ein durch die Nase, aus durch den Mund): Solange die Nasenatmung reicht, liegt die Intensität im aeroben Bereich.</li>
+            <li>Regeln: <b>„Laufen ohne zu Schnaufen“</b> (keine Atemnot) · <b>„Schweigen ist Silber, Reden ist Gold“</b> (mit dem Partner noch ganze Sätze sprechen können).</li>
+            <li><b>Subjektives Belastungsgefühl</b> (Abb. 17): sehr leicht – leicht – mittel – schwer – sehr schwer. Ideal im Gesundheits- und Fitnesssport: <b>leicht bis mittel</b> (aerob). Grundsätzlich soll man sich beim Training nach der Dauermethode <b>während und danach wohlfühlen</b>.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Buch-Frage: Warum verhindern die Regeln eine zu intensive Belastung?</strong> Wer reden kann bzw. nicht schnauft, hat keine Atemnot → die aufgenommene O₂-Menge reicht für den Bedarf → aerober Bereich, kein Laktatanstieg über das Gleichgewicht hinaus.</li>
+            <li>Das Belastungsgefühl berücksichtigt außer den normalen Einflussfaktoren auch die <b>aktuelle Befindlichkeit</b> (Schlaf, Stress, Krankheit) – das kann keine Formel.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Steuerungsmöglichkeiten vergleichen: Herzfrequenz (genau, Formeln/Pulsuhr) – Atmung (während der Belastung, ohne Gerät) – Belastungsgefühl (berücksichtigt Tagesform, braucht Erfahrung).</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=m52QiGiaICw" target="_blank" rel="noopener">Richtig atmen beim Joggen: So kommst du nie wieder außer Puste</a> <small>runnersflow · 3:37</small></li>
+            <li><a href="https://www.youtube.com/watch?v=SHFDUHbbke4" target="_blank" rel="noopener">RUNNER’S WORLD erklärt … die richtige Atmung beim Laufen</a> <small>RUNNER’S WORLD · 11:07</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Was zeigt ein eingehaltener 4-Schritt-Atemrhythmus an?</p>
+            <ol><li>Die Belastung liegt über der anaeroben Schwelle</li><li>Die Belastung liegt im aeroben Bereich</li><li>Man sollte das Tempo sofort senken</li></ol>
+            <p class="why">4 Schritte ein, 4 aus → aerob. Selbst beim 2-Schritt-Rhythmus (mit Atemtiefe) nicht über der ANS.</p></div>
+          <div class="q" data-a="2"><p>Welches subjektive Belastungsgefühl ist im Gesundheits- und Fitnesssport ideal?</p>
+            <ol><li>sehr leicht</li><li>schwer bis sehr schwer</li><li>leicht bis mittel</li></ol>
+            <p class="why">Abb. 17: leicht bis mittel = aerob. Schwer/sehr schwer = anaerob.</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="trainingsprogramme" data-show="2">
+        <header class="topic-head"><h3>Trainingshäufigkeit, Programme &amp; Sportarten</h3></header>
+        <div class="level" data-level="1">
+          <p>Einmal pro Woche reicht <strong>nicht</strong> – dann wirst du nicht besser, vielleicht sogar schlechter. Du brauchst <strong>mindestens zwei</strong> Einheiten pro Woche.</p>
+          <ul>
+            <li><strong>Minimalprogramm</strong> (Anfänger, Gesundheit): optimal 3 × 30 min/Woche mit Puls 180 − Alter.</li>
+            <li><strong>Optimalprogramm</strong> (Fortgeschrittene, Fitness): z. B. 3 × 60 min oder 5 × 40 min mit Puls 170 − ½ Alter ± 10.</li>
+          </ul>
+          <p>Und: Nicht nur Laufen zählt – Radfahren, Schwimmen, Nordic Walking gehen auch, du brauchst dann aber einen <strong>niedrigeren Puls</strong> und meist <strong>mehr Zeit</strong>.</p>
+        </div>
+        <div class="level" data-level="2">
+          <ul>
+            <li>Für ein wirksames Ausdauertraining sind <b>mindestens zwei Trainingseinheiten pro Woche</b> erforderlich. Je geringer die Trainingshäufigkeit, desto länger muss die Belastungsdauer sein.</li>
+          </ul>
+          <div class="tbl"><table>
+            <thead><tr><th>Tab. 12 (Lauftraining)</th><th>Intensität (HF)</th><th>Häufigkeit/Dauer</th></tr></thead>
+            <tbody>
+              <tr><th>Minimalprogramm<br><small>Anfänger, Gesundheitssport</small></th><td>180 − LA</td><td><b>optimal 3 × 30 min/Woche</b> · täglich 15 min · 4 × 25 min · 2 × 45 min</td></tr>
+              <tr><th>Optimalprogramm<br><small>Fortgeschrittene, Fitnesssport</small></th><td>(170 − ½ LA) ± 10</td><td>täglich 30–35 min · 5 × 40 · 4 × 50 · 3 × 60 min/Woche</td></tr>
+            </tbody>
+          </table></div>
+          <ul>
+            <li>Nach 8–10 Wochen Minimalprogramm ist die Ausdauer deutlich besser – danach wird die <b>Reizschwelle kaum noch erreicht</b>; Gesundheit nur auf niedrigem Niveau stabilisiert → auf <b>Optimalprogramm</b> umstellen bzw. ergänzen.</li>
+            <li>Gute Ausdauerleistungsfähigkeit braucht auch leistungsfähige <b>Muskulatur</b> (Kapillarisierung, aerobe Kapazität) → am effektivsten mit extensivem Intervalltraining, aber nur als Ergänzung (max. 10–15 % des Wochenumfangs).</li>
+          </ul>
+          <div class="tbl"><table>
+            <thead><tr><th>Tab. 13 Sportart</th><th>Intensität (S/min)</th><th>Dauer (min)</th><th>Merkmal</th></tr></thead>
+            <tbody>
+              <tr><th>Laufen</th><td>Laufpuls = 170 − ½ LA</td><td>20–45</td><td>Voraussetzung: belastungsfähiger Bewegungsapparat</td></tr>
+              <tr><th>Radfahren, Ergometer, Skilanglauf, Rollski</th><td>Laufpuls − 10</td><td>40–90</td><td>gelenkschonend, gute Fettverbrennung; Skilanglauf = Ganzkörper</td></tr>
+              <tr><th>Schwimmen</th><td>Laufpuls − 20</td><td>20–45</td><td>Ganzkörperbewegung</td></tr>
+              <tr><th>Inline-Skating</th><td>Laufpuls − 20</td><td>40–90</td><td>gelenkschonend</td></tr>
+              <tr><th>Nordic-Walking</th><td>Laufpuls − 30</td><td>40–75</td><td>gelenkschonend, gute Fettverbrennung</td></tr>
+              <tr><th>Zügiges Gehen (Walking)</th><td>Laufpuls − 40</td><td>90–120</td><td>gelenkschonend</td></tr>
+            </tbody>
+          </table></div>
+          <p>Wirksam ist ein Training nur, wenn <b>mindestens 1/7 der Muskulatur</b> (ca. ein Bein) belastet wird. Je weniger HKS und Stoffwechsel belastet sind, desto <b>länger</b> muss die Belastung sein; Laufen und Schwimmen belasten am stärksten → kürzere Dauer reicht.</p>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Warum ist der Puls beim Schwimmen niedriger?</strong> Horizontale Lage, Wasserdruck und der <b>Tauchreflex</b> senken die HF – darum Laufpuls − 20.</li>
+            <li><strong>Rechenbeispiel:</strong> 17 Jahre: Laufpuls 170 − 8,5 ≈ 161 → Radfahren ca. 151, Schwimmen ca. 141, Nordic Walking ca. 131 S/min.</li>
+            <li><strong>Homöostase/Trainingsprinzipien:</strong> Der zeitliche Abstand der Einheiten bestimmt die Effektivität – zu große Pausen → Anpassungen gehen zurück.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Trainingsplan-Aufgabe: Programm (Minimal/Optimal) + Formel + Sportart-Korrektur aus Tab. 13 + Häufigkeit/Dauer. Immer mit dem Lebensalter <b>ausrechnen</b>.</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=KCQDvxTLXNw" target="_blank" rel="noopener">Trainingsprinzipien</a> <small>Sporttheorie Leistungskurs · 3:38</small></li>
+            <li><a href="https://www.youtube.com/watch?v=M5n1k4CcD3s" target="_blank" rel="noopener">Ausdauer – die Trainingsmethodik – ein Überblick</a> <small>Mr V Englisch und Sport · 17:09</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="0"><p>Wie viele Trainingseinheiten pro Woche sind für ein wirksames Ausdauertraining mindestens erforderlich?</p>
+            <ol><li>zwei</li><li>eine</li><li>fünf</li></ol>
+            <p class="why">Mindestens zwei. Bei nur einer Einheit ist keine Verbesserung möglich, das Niveau kann sogar sinken.</p></div>
+          <div class="q" data-a="2"><p>Wie wird der Trainingspuls beim Nordic-Walking im Vergleich zum Laufen angepasst?</p>
+            <ol><li>Laufpuls + 10</li><li>Laufpuls − 10</li><li>Laufpuls − 30</li></ol>
+            <p class="why">Tab. 13: Rad −10, Schwimmen/Inline −20, Nordic-Walking −30, Walking −40.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= KAPITEL VI ================= -->
+    <section class="chapter" id="kap-6" style="--cc:var(--c6)" data-short="Testen &amp; Tipps" data-msg="Ziel erreicht – jetzt nur noch dranbleiben!">
+      <header class="chapter-head">
+        <div class="chapter-no">VI</div>
+        <div><div class="overline">Kapitel VI · Buch S. 38–42</div><h2>Ausdauer überprüfen &amp; Tipps</h2><p class="chapter-desc">Labor- und Feldtests, Cooper-Test mit Bewertungstabelle, 30-min-Lauf, Schwimmtest, Ruhe- und Erholungspuls und Tipps für das eigene Training.</p></div>
+        <div class="chapter-count"></div>
+      </header>
+
+      <article class="topic" id="cooper" data-show="2">
+        <header class="topic-head"><h3>Ausdauertests: Cooper-Test &amp; Co.</h3></header>
+        <div class="level" data-level="1">
+          <p>Beim <strong>Cooper-Test</strong> läufst du <strong>12 Minuten</strong> so weit du kannst. Schon nach 10 Minuten kommt über 90 % der Energie aerob – der Test misst also deine <strong>aerobe Ausdauer</strong>.</p>
+          <p>Der Trick: <strong>gleichmäßig</strong> laufen, nur knapp über deiner anaeroben Schwelle. Wer zu schnell startet, übersäuert und quält sich den Rest der Zeit.</p>
+          <p>Für 15 Punkte: Jungen <strong>3175 m</strong>, Mädchen <strong>2675 m</strong>.</p>
+        </div>
+        <div class="level" data-level="2">
+          <ul>
+            <li>Genau: <b>Stufentests</b> mit HF und Laktat im <b>Labor</b> (Laufband, Fahrradergometer) oder im <b>Feldtest</b> (Rundbahn) – sehr aufwändig.</li>
+            <li>Einfacher: kontinuierliche, konstante Laufbelastung über eine <b>Strecke</b> (2000–5000 m, auch 1500 m) oder eine <b>Zeit</b> (6-min-Lauf im Deutschen Motorik-Test; 12- oder 30-min-Lauf im Abitur Baden-Württemberg).</li>
+            <li><b>Shuttle-Run-Test</b>: Halle, 20-m-Umkehrstrecke, Tempo jede Minute erhöht (Stufentest); gemessen wird die erreichte Stufe.</li>
+            <li>Bei allen Tests muss sich der Sportler <b>ausbelasten</b>.</li>
+          </ul>
+          <h4>12-min-Lauf (Cooper-Test)</h4>
+          <p>Gemessen wird die in 12 min gelaufene Strecke, bewertet an normierten Tabellen. Bei <b>10 min Belastung</b> wird die Gesamtenergie zu <b>über 90 % aerob</b> bereitgestellt → gute Abschätzung der allgemeinen aeroben Ausdauer; Ergebnisse korrelieren stark mit der aeroben Leistungsfähigkeit.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Notenpunkte</th><th>15</th><th>14</th><th>13</th><th>12</th><th>11</th><th>10</th><th>9</th><th>8</th><th>7</th><th>6</th><th>5</th><th>4</th><th>3</th><th>2</th><th>1</th></tr></thead>
+            <tbody>
+              <tr><th>Schüler (m)</th><td>3175</td><td>3125</td><td>3075</td><td>3025</td><td>2975</td><td>2925</td><td>2825</td><td>2725</td><td>2625</td><td>2525</td><td>2425</td><td>2325</td><td>2175</td><td>2025</td><td>1875</td></tr>
+              <tr><th>Schülerinnen (m)</th><td>2675</td><td>2625</td><td>2575</td><td>2525</td><td>2475</td><td>2425</td><td>2325</td><td>2225</td><td>2125</td><td>2025</td><td>1925</td><td>1825</td><td>1675</td><td>1525</td><td>1375</td></tr>
+            </tbody>
+          </table></div>
+          <p style="font-size:13px;color:var(--muted)">Tab. 14: Abitur Baden-Württemberg ab 2010; Schülerinnen jeweils 500 m weniger; 0 Punkte unter 1875 bzw. 1375 m. Abstand pro Punkt: 50 m (11–15), 100 m (5–10), 150 m (2–4).</p>
+          <ul>
+            <li>Der Cooper-Test ist <b>kein Trainingsmittel</b>; Verbesserung nur über längere Zeit mit <b>Dauermethoden</b> (ergänzend extensive Intervalle): „Der Weg ist das Ziel“. Mit Eingangs- und Wiederholungstest lässt sich die <b>Wirksamkeit des Trainings</b> überprüfen.</li>
+            <li><b>30-min-Lauf:</b> Intensität an oder knapp unter der ANS (max. Steady-State) – sehr hoher Belastungsgrad. Gelaufene Strecke ca. <b>2,33-fach</b> der 12-min-Strecke.</li>
+            <li><b>Schwimmen, 12 min:</b> nur begrenzt aussagekräftig (Technik!); für gleiche Strecke 3,5–4-mal mehr Energie als Laufen → Schwimmstrecke ca. <b>¼ der Laufstrecke</b>.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Buch-Frage: Warum ist die Leistungssteigerung im höheren Bereich geringer?</strong> Pro Punkt sind oben nur 50 m nötig, unten 150 m: Im hohen Leistungsbereich liegt man schon nahe an der eigenen anaeroben Schwelle – jede weitere Verbesserung ist physiologisch viel schwerer zu erreichen als bei Untrainierten.</li>
+            <li><strong>Abb. 18:</strong> Freizeitsportler mit 15 Punkten laufen nur wenig über der ANS. Schüler 8 (8,5 Punkte) müsste für 11 Punkte ca. 14,9 km/h laufen → er würde schnell stark übersäuern und sich quälen.</li>
+            <li><strong>Umrechnen:</strong> 3175 m in 12 min = 15,9 km/h. ANS-Tempo der Läuferin aus Abb. 11 (14,5 km/h) → 2.900 m.</li>
+            <li>Vorbereitung auf den Eingangstest: Tempogefühl und Atmung schulen – sonst misst man beim zweiten Test nur das bessere Einteilen, nicht die bessere Ausdauer.</li>
+          </ul>
+          <div class="box fehler"><span class="box-label">Typischer Fehler</span>„Wer oft Cooper-Tests läuft, wird ausdauernder.“ – Nein, der Test ist kein Trainingsmittel.</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=y3s7WygkDUU" target="_blank" rel="noopener">Cooper-Test einfach erklärt – wie trainiere ich dafür?</a> <small>Karriere als Fitnesstrainer · 13:14</small></li>
+            <li><a href="https://www.youtube.com/watch?v=9v3N2guuxy0" target="_blank" rel="noopener">5-Schritte-Plan für 3000 m in 12 min – Cooper-Test-Tipps</a> <small>Ulli Thessmann · 4:18</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="1"><p>Warum misst der Cooper-Test die allgemeine aerobe Ausdauer?</p>
+            <ol><li>Weil man dabei kein Laktat bildet</li><li>Weil schon bei 10 min Belastung über 90 % der Energie aerob bereitgestellt werden</li><li>Weil man dabei gehen darf</li></ol>
+            <p class="why">Bei 10 min Belastungszeit &gt; 90 % aerob → gute Abschätzung, starke Korrelation mit der aeroben Leistungsfähigkeit.</p></div>
+          <div class="q" data-a="2"><p>Wie viele Meter braucht eine Schülerin für 15 Punkte?</p>
+            <ol><li>3175 m</li><li>2425 m</li><li>2675 m</li></ol>
+            <p class="why">Schüler 3175 m, Schülerinnen jeweils 500 m weniger = 2675 m.</p></div>
+          <div class="q" data-a="0"><p>Wie verhält sich die 30-min-Strecke zur 12-min-Strecke (Erfahrungswert)?</p>
+            <ol><li>ca. das 2,33-fache</li><li>genau das 2,5-fache</li><li>ca. das Doppelte</li></ol>
+            <p class="why">Erfahrungswert laut Buch: ca. 2,33-fach (Intensität bei 30 min etwas geringer).</p></div>
+        </div>
+      </article>
+
+      <article class="topic" id="ruhepuls-tipps" data-show="2">
+        <header class="topic-head"><h3>Ruhe- &amp; Erholungspuls, Tipps zum Ausdauertraining</h3></header>
+        <div class="level" data-level="1">
+          <p>Dein <strong>Puls</strong> verrät deine Fitness: Ruhepuls <strong>unter 65</strong> und nach 3 Minuten Pause <strong>unter 110</strong>? Dann ist deine Ausdauer sehr gut.</p>
+          <p>Training wirkt zuerst beim <strong>Erholungspuls</strong> (nach ca. 6 Wochen), erst später sinkt auch der Ruhepuls.</p>
+          <p>Und das Wichtigste: <strong>anfangen</strong>, regelmäßig bleiben, Spaß haben – „Beweg dich, wo du kannst“.</p>
+        </div>
+        <div class="level" data-level="2">
+          <h4>Ruhepuls und Erholungspuls</h4>
+          <ul>
+            <li>Ruhepuls <b>unter 65 S/min</b> und HF sinkt innerhalb von <b>drei Minuten</b> nach Belastungsende <b>unter 110 S/min</b> → <b>sehr gute</b> Ausdauerleistungsfähigkeit.</li>
+            <li>Bei Untrainierten sinkt die HF in den ersten drei Minuten nach einer Belastung (HF über 170) nur um ca. <b>40 S/min</b>.</li>
+            <li><b>Erster messbarer Effekt</b> eines Ausdauertrainings: schnelleres Absinken der HF nach Belastung (<b>Erholungspuls</b>) – schon nach ca. <b>sechs Wochen</b>. Den <b>Ruhepuls</b> senkt erst eine längere Trainingsphase.</li>
+          </ul>
+          <h4>Tipps zum Ausdauertraining (S. 41–42)</h4>
+          <ul>
+            <li>Gesundheitsbewusstes Verhalten <b>beginnt im Kopf</b> (informieren, beobachten, positive Einstellung).</li>
+            <li><b>Eigene praktische Erfahrungen</b> sammeln – sonst bleibt alles Theorie und Vorurteil.</li>
+            <li><b>Heute ist besser als morgen</b> – keine Ausreden.</li>
+            <li><b>Konkrete, erreichbare Ziele</b> setzen, über kleine Erfolge freuen.</li>
+            <li>Sportart wählen, die <b>Spaß</b> macht – Hauptsache <b>wohlfühlen</b> (Laufen ist aber am effektivsten).</li>
+            <li><b>Regelmäßig</b> trainieren – größere Pausen senken Leistung und Motivation.</li>
+            <li>Als Anfänger zunächst <b>„unterdosiert“</b> trainieren.</li>
+            <li><b>Moderater Beginn</b> („Aufwärmen“) und Ausklingen („cool down“).</li>
+            <li>Steigern: erst die <b>Belastungsdauer</b>, dann die <b>Häufigkeit</b>, erst später die <b>Intensität</b>.</li>
+            <li><b>Ruhepuls regelmäßig kontrollieren</b> – erhöht kann er auf einen fieberhaften Infekt hinweisen → nicht trainieren.</li>
+            <li><b>Rahmenbedingungen</b> beachten: Nahrungsaufnahme, Alkohol, wenig Schlaf, Smog, Ozon, Luftfeuchtigkeit, Temperatur, Stress, Erkrankungen.</li>
+            <li>Im Alltag <b>möglichst viel bewegen</b>: Rad, zu Fuß, Treppen, Sitzen unterbrechen.</li>
+          </ul>
+        </div>
+        <div class="level" data-level="3">
+          <ul>
+            <li><strong>Warum zeigt der Erholungspuls Training früher als der Ruhepuls?</strong> (Fachliche Erklärung, nicht im Buch:) Erholung hängt stark von der aeroben Kapazität der Muskulatur und vom Laktatabbau ab, die sich schnell anpassen; das Herz (Schlagvolumen → Ruhepuls) braucht für die Vergrößerung länger (→ <a href="#anpassungen">Anpassungen</a>).</li>
+            <li><strong>Reihenfolge Dauer → Häufigkeit → Intensität:</strong> passt zu den Programmen in <a href="#trainingsprogramme">Tab. 12</a> – erst die aerobe Grundlage, dann härter.</li>
+          </ul>
+          <div class="box tipp"><span class="box-label">Klausur-Tipp</span>Beratungsaufgabe („Ihr Freund will mit dem Laufen anfangen“): Minimalprogramm, 180 − LA, unterdosiert beginnen, Aufwärmen/Cool-down, erst Dauer, dann Häufigkeit steigern, Ruhepuls kontrollieren.</div>
+        </div>
+        <div class="videos"><b>Videos</b>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=ffmGIlgEA6k" target="_blank" rel="noopener">Anleitung: So messen Sie Ihren Puls und Ihre Herzfrequenz</a> <small>Stiftung Gesundheitswissen · 1:59</small></li>
+            <li><a href="https://www.youtube.com/watch?v=731rM5H4GZE" target="_blank" rel="noopener">Richtiges Training: Das verrät dein Puls über deine Fitness</a> <small>Health Hive Deutschland · 14:41</small></li>
+          </ul>
+        </div>
+        <div class="quiz">
+          <div class="q" data-a="2"><p>Was ist der erste messbare Effekt eines Ausdauertrainings?</p>
+            <ol><li>Ein niedrigerer Ruhepuls nach 2 Wochen</li><li>Eine höhere maximale Herzfrequenz</li><li>Ein schnelleres Absinken der HF nach Belastung (Erholungspuls), nach ca. 6 Wochen</li></ol>
+            <p class="why">Erst der Erholungspuls (ca. 6 Wochen), der Ruhepuls sinkt erst nach längerer Trainingsphase.</p></div>
+          <div class="q" data-a="0"><p>In welcher Reihenfolge soll man das Training steigern?</p>
+            <ol><li>Dauer → Häufigkeit → Intensität</li><li>Intensität → Dauer → Häufigkeit</li><li>Häufigkeit → Intensität → Dauer</li></ol>
+            <p class="why">Erst die Belastungsdauer, dann die Häufigkeit und erst später die Intensität erhöhen.</p></div>
+        </div>
+      </article>
+    </section>
+
+
+    <section class="block" id="exams">
+      <h2>Jetzt abfragen!</h2>
+      <p class="block-lead">Statt Übungsklausuren gibt es hier Lernkarten: Vorderseite lesen, Antwort im Kopf sagen, umdrehen, ehrlich bewerten. Was du nicht wusstest, kommt nochmal.</p>
+      <div class="lk-cta">
+        <a href="lernkarten.html"><span class="overline">Lernkarten</span><b>Alle Themen</b><span>Rund 100 Karten zu allen 6 Kapiteln, mit Karteikasten (neu · nochmal · fast · sitzt).</span></a>
+        <a href="lernkarten.html#ka"><span class="overline">Lernkarten</span><b>Nur KA!-Stoff</b><span>Nur die Themen von der Themenliste und den angekreuzten Seiten.</span></a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>Lernzettel „Ausdauer“ · Sport-Theorie. Zusammengestellt aus dem Buchkapitel „Ausdauer“ und der Themenliste zur Arbeit. Ohne Gewähr – bei Widersprüchen gilt das Buch bzw. der Unterricht. Dein Fortschritt wird nur in diesem Browser gespeichert. Die Videos sind Links zu YouTube (externe Seite, öffnet in neuem Tab).</p>
+    <button class="linkish" type="button" id="resetAll">Fortschritt zurücksetzen</button>
+  </div>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<div class="finale" id="finale" hidden>
+  <div class="finale-card" role="dialog" aria-modal="true" aria-labelledby="finaleTitle">
+    <div class="overline">Alle Themen abgehakt</div>
+    <h2 id="finaleTitle">Ultraläufer!</h2>
+    <p>Dein Ausdauer-Akku ist voll. Jetzt der echte Test: Frag dich mit den Lernkarten ab, bis alles „sitzt“.</p>
+    <p><a class="btn" href="lernkarten.html">Zu den Lernkarten →</a> <button class="btn ghost" type="button" data-close>Schließen</button></p>
+  </div>
+</div>
+
+<script>
+/* Lernkarten-Teaser: Kartenstand aus dem Browser lesen */
+(function(){try{var s=JSON.parse(localStorage.getItem('sport-ausdauer-karten')||'null');if(s&&s.sum&&s.sum.total){var e=document.getElementById('lkTeaserText');if(e)e.textContent=s.sum.sitzt+' von '+s.sum.total+' Karten sitzen schon. Weiter abfragen – mit Filter „nur KA!“.';}}catch(e){}})();
+</script>
+<script>
+/* Pulsrechner (Thema Herzfrequenz) */
+(function(){
+  var a=document.getElementById('prAlter'), r=document.getElementById('prRuhe');
+  if(!a||!r) return;
+  function set(id,v){var e=document.getElementById(id); if(e) e.textContent=v;}
+  function calc(){
+    var la=parseFloat(a.value), rp=parseFloat(r.value);
+    if(!(la>0)||!(rp>0)){['prMax','prAerob','prFit','prK60','prK75'].forEach(function(i){set(i,'–')});return;}
+    var max=220-la, mid=170-la/2;
+    set('prMax',Math.round(max)); set('prAerob',Math.round(180-la));
+    set('prFit',Math.round(mid-10)+'–'+Math.round(mid+10));
+    set('prK60',Math.round(rp+(max-rp)*0.6)); set('prK75',Math.round(rp+(max-rp)*0.75));
+  }
+  a.addEventListener('input',calc); r.addEventListener('input',calc); calc();
+})();
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>

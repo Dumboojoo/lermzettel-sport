@@ -1,0 +1,8 @@
+# Originalunterlagen (Scans/Fotos) – nicht hochladen
+*.pdf
+unterlagen/
+
+# Lokale Werkzeug-Einstellungen
+.claude/
+.DS_Store
+_*.html
